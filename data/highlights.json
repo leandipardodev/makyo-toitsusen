@@ -1,0 +1,21 @@
+{
+  "_notas": [
+    "Clips sueltos, que NO pertenecen a un torneo concreto (o que merece la pena",
+    "destacar aunque sí salieran de una partida). Los highlights que sí son de un",
+    "torneo se escriben en el propio torneo, dentro de su campo 'highlights', y",
+    "esta galeria los recoge automaticamente.",
+    "",
+    "Cada clip:",
+    "  titulo     texto corto, describe el momento",
+    "  jugador    nombre de quien lo juega (texto libre)",
+    "  personaje  id de personajes.json, o '' si son dos",
+    "  rival      nombre del rival, opcional",
+    "  pj_rival   id del personaje del rival, opcional",
+    "  origen     texto libre, ej. 'amistoso' o el nombre del torneo",
+    "  fecha      texto libre, opcional",
+    "  video      link de YouTube con /embed/",
+    "  nota       una linea de contexto, opcional"
+  ],
+
+  "clips": []
+}

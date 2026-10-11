@@ -1,0 +1,62 @@
+{
+  "_notas": [
+    "Reglas del circuito. Los textos estan vacios a proposito: los escribis vos.",
+    "Para llenarlo, poné el texto en el idioma que sea y la web lo muestra igual.",
+    "Si queres que las reglas salgan tambien en los otros idiomas, repeti el bloque",
+    "en 'es' / 'en' / 'zh' / 'ja'. Si falta un idioma, se cae al de 'es'.",
+    "",
+    "Cada bloque:",
+    "  titulo  nombre del bloque de reglas",
+    "  items   lista de reglas. Cada regla acepta:",
+    "            texto plano            -> una linea",
+    "            { t:'', d:'' }         -> regla con titulo y detalle",
+    "  aviso   texto de pie del bloque (opcional)"
+  ],
+
+  "intro": "",
+
+  "bloques": [
+    {
+      "id": "inscripcion",
+      "icono": "📝",
+      "titulo": "Inscripción",
+      "items": [],
+      "aviso": ""
+    },
+    {
+      "id": "formato",
+      "icono": "🎮",
+      "titulo": "Formato de las partidas",
+      "items": [],
+      "aviso": ""
+    },
+    {
+      "id": "personajes",
+      "icono": "🥊",
+      "titulo": "Personajes",
+      "items": [],
+      "aviso": ""
+    },
+    {
+      "id": "reglamento",
+      "icono": "📋",
+      "titulo": "Reglamento dentro de la partida",
+      "items": [],
+      "aviso": ""
+    },
+    {
+      "id": "conducta",
+      "icono": "🤝",
+      "titulo": "Conducta",
+      "items": [],
+      "aviso": ""
+    },
+    {
+      "id": "premios",
+      "icono": "🏆",
+      "titulo": "Premios y títulos",
+      "items": [],
+      "aviso": ""
+    }
+  ]
+}

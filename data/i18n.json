@@ -9,7 +9,10 @@
    "guias": "Guías",
    "circuito": "Circuito",
    "descargas": "Descargas",
-   "matchup": "Matchup"
+   "matchup": "Matchup",
+   "torneos": "Torneos",
+   "highlights": "Clips",
+   "reglas": "Reglas"
   },
   "volver": "← todos los luchadores",
   "portada": {
@@ -38,6 +41,18 @@
    "datos": {
     "t": "Movimientos",
     "d": "leídos del ROM, con inicio, activo y recuperación"
+   },
+   "torneos": {
+    "t": "Torneos",
+    "d": "con el video completo de cada uno"
+   },
+   "highlights": {
+    "t": "Clips",
+    "d": "los mejores momentos, con filtro"
+   },
+   "reglas": {
+    "t": "Reglas",
+    "d": "inscripcion, formato y conducta"
    }
   },
   "datos_clave": [
@@ -379,6 +394,42 @@
   "pie": {
    "linea": "guía hecha a mano sobre el ROM y el emulador.",
    "origenes": "Cada dato lleva su origen: verificado en el código, sin verificar, o"
+  },
+  "torneos": {
+   "titulo": "Torneos",
+   "sub": "Cada torneo con su video completo, el podio y los clips que salieron de el.",
+   "torneos": "Torneos",
+   "torneos_d": "con video completo",
+   "highlights": "Clips",
+   "highlights_d": "de torneo y sueltos",
+   "highlights_sub": "Clips sueltos y clips de cada torneo, juntos en una sola galeria.",
+   "reglas": "Reglas",
+   "reglas_d": "lo que hay que cumplir",
+   "todos": "Todos los torneos",
+   "vacio": "Todavia no hay torneos cargados. Se agregan en data/torneos.json.",
+   "video_completo": "Video completo del torneo",
+   "sin_video": "sin video",
+   "falta_video": "Falta el video. Se pega en data/torneos.json, campo \"video\", como link de YouTube con /embed/.",
+   "formato_torneo": "Torneo",
+   "formato_v2v2": "2 contra 2",
+   "formato_liga": "Liga",
+   "entradas": "entradas",
+   "premio": "Premio",
+   "podio": "Podio",
+   "personajes_permitidos": "Personajes permitidos",
+   "rondas": "Rondas y resultados",
+   "ronda": "Ronda",
+   "jugador_a": "Jugador A",
+   "jugador_b": "Jugador B",
+   "marcador": "Marcador",
+   "video": "Video",
+   "ver": "Ver",
+   "todos_pj": "Todos los personajes",
+   "todos_origenes": "Todos los orígenes",
+   "sin_clips": "Todavia no hay clips. Se agregan en data/highlights.json, o dentro de cada torneo.",
+   "sin_titulo": "Clip sin titulo",
+   "reglas_sub": "Lo que hay que cumplir para jugar el circuito.",
+   "reglas_vacias": "Este bloque todavia esta vacio."
   }
  },
  "en": {
@@ -390,7 +441,10 @@
    "guias": "Guides",
    "circuito": "Circuit",
    "descargas": "Downloads",
-   "matchup": "Matchup"
+   "matchup": "Matchup",
+   "torneos": "Tournaments",
+   "highlights": "Clips",
+   "reglas": "Rules"
   },
   "volver": "← all fighters",
   "portada": {
@@ -419,6 +473,18 @@
    "datos": {
     "t": "Moves",
     "d": "read from the ROM, with startup, active and recovery"
+   },
+   "torneos": {
+    "t": "Tournaments",
+    "d": "with the full video of each one"
+   },
+   "highlights": {
+    "t": "Clips",
+    "d": "the best moments, filterable"
+   },
+   "reglas": {
+    "t": "Rules",
+    "d": "sign-up, format and conduct"
    }
   },
   "datos_clave": [
@@ -760,6 +826,42 @@
   "pie": {
    "linea": "a guide written by hand from the ROM and the emulator.",
    "origenes": "Every figure says where it comes from: verified in the code, unverified, or"
+  },
+  "torneos": {
+   "titulo": "Tournaments",
+   "sub": "Each tournament with its full video, the podium and the clips it produced.",
+   "torneos": "Tournaments",
+   "torneos_d": "with the full video",
+   "highlights": "Clips",
+   "highlights_d": "from tournaments and loose",
+   "highlights_sub": "Loose clips and clips from each tournament, all in one gallery.",
+   "reglas": "Rules",
+   "reglas_d": "what you have to follow",
+   "todos": "All tournaments",
+   "vacio": "No tournaments yet. They go in data/torneos.json.",
+   "video_completo": "Full tournament video",
+   "sin_video": "no video",
+   "falta_video": "The video is missing. Put it in data/torneos.json, field \"video\", as a YouTube /embed/ link.",
+   "formato_torneo": "Tournament",
+   "formato_v2v2": "2-on-2",
+   "formato_liga": "League",
+   "entradas": "entrants",
+   "premio": "Prize",
+   "podio": "Podium",
+   "personajes_permitidos": "Allowed characters",
+   "rondas": "Rounds and results",
+   "ronda": "Round",
+   "jugador_a": "Player A",
+   "jugador_b": "Player B",
+   "marcador": "Score",
+   "video": "Video",
+   "ver": "Watch",
+   "todos_pj": "All characters",
+   "todos_origenes": "All sources",
+   "sin_clips": "No clips yet. They go in data/highlights.json, or inside each tournament.",
+   "sin_titulo": "Untitled clip",
+   "reglas_sub": "What you have to follow to play in the circuit.",
+   "reglas_vacias": "This block is still empty."
   }
  },
  "zh": {
@@ -771,7 +873,10 @@
    "guias": "指南",
    "circuito": "赛事",
    "descargas": "下载",
-   "matchup": "相性"
+   "matchup": "相性",
+   "torneos": "赛事",
+   "highlights": "片段",
+   "reglas": "规则"
   },
   "volver": "← 全部格斗家",
   "portada": {
@@ -800,6 +905,18 @@
    "datos": {
     "t": "招式",
     "d": "读自 ROM，含启动、持续与收招"
+   },
+   "torneos": {
+    "t": "赛事",
+    "d": "每场都有完整录像"
+   },
+   "highlights": {
+    "t": "片段",
+    "d": "精彩时刻，可筛选"
+   },
+   "reglas": {
+    "t": "规则",
+    "d": "报名、赛制与行为规范"
    }
   },
   "datos_clave": [
@@ -1141,6 +1258,42 @@
   "pie": {
    "linea": "这份指南是根据 ROM 和模拟器手写的。",
    "origenes": "每个数据都标出来源：代码验证、未验证，或"
+  },
+  "torneos": {
+   "titulo": "赛事",
+   "sub": "每场赛事都有完整录像、领奖台和由此产生的片段。",
+   "torneos": "赛事",
+   "torneos_d": "带完整录像",
+   "highlights": "片段",
+   "highlights_d": "赛事的和单独的",
+   "highlights_sub": "单独的片段和每场赛事的片段，全部在一个画廊里。",
+   "reglas": "规则",
+   "reglas_d": "必须遵守的内容",
+   "todos": "全部赛事",
+   "vacio": "还没有赛事。在 data/torneos.json 里添加。",
+   "video_completo": "赛事完整录像",
+   "sin_video": "无录像",
+   "falta_video": "缺录像。填在 data/torneos.json 的 \"video\" 字段，用带 /embed/ 的 YouTube 链接。",
+   "formato_torneo": "单挑赛",
+   "formato_v2v2": "2对2",
+   "formato_liga": "联赛",
+   "entradas": "参赛",
+   "premio": "奖品",
+   "podio": "领奖台",
+   "personajes_permitidos": "可用角色",
+   "rondas": "轮次与结果",
+   "ronda": "轮次",
+   "jugador_a": "选手 A",
+   "jugador_b": "选手 B",
+   "marcador": "比分",
+   "video": "录像",
+   "ver": "观看",
+   "todos_pj": "全部角色",
+   "todos_origenes": "全部来源",
+   "sin_clips": "还没有片段。填在 data/highlights.json，或每场赛事里。",
+   "sin_titulo": "无标题片段",
+   "reglas_sub": "参加联赛必须遵守的内容。",
+   "reglas_vacias": "这一块还是空的。"
   }
  },
  "ja": {
@@ -1152,7 +1305,10 @@
    "guias": "ガイド",
    "circuito": "大会",
    "descargas": "ダウンロード",
-   "matchup": "相性"
+   "matchup": "相性",
+   "torneos": "大会",
+   "highlights": "クリップ",
+   "reglas": "ルール"
   },
   "volver": "← ファイター一覧",
   "portada": {
@@ -1181,6 +1337,18 @@
    "datos": {
     "t": "技",
     "d": "ROMから読み取った発生・有効・後隙"
+   },
+   "torneos": {
+    "t": "大会",
+    "d": "各大会の完全录像"
+   },
+   "highlights": {
+    "t": "クリップ",
+    "d": "名場面、絞り込み可"
+   },
+   "reglas": {
+    "t": "ルール",
+    "d": "参加、方式、マナー"
    }
   },
   "datos_clave": [
@@ -1522,6 +1690,42 @@
   "pie": {
    "linea": "ROMとエミュレータから手で書いたガイド。",
    "origenes": "すべてのデータに由来を明記：コードで検証済み、未検証、または"
+  },
+  "torneos": {
+   "titulo": "大会",
+   "sub": "各大会の完全录像、表彰、そしてそこから生まれたクリップ。",
+   "torneos": "大会",
+   "torneos_d": "完全录像つき",
+   "highlights": "クリップ",
+   "highlights_d": "大会のものと単独のもの",
+   "highlights_sub": "単独のクリップと各大会のクリップを、ひとつのギャラリーにまとめました。",
+   "reglas": "ルール",
+   "reglas_d": "守るべきこと",
+   "todos": "すべての大会",
+   "vacio": "まだ大会がありません。data/torneos.json に入れてください。",
+   "video_completo": "大会の完全录像",
+   "sin_video": "录像なし",
+   "falta_video": "录像がありません。data/torneos.json の \"video\" に、/embed/ の YouTube リンクを入れます。",
+   "formato_torneo": "トーナメント",
+   "formato_v2v2": "2対2",
+   "formato_liga": "リーグ",
+   "entradas": "参加",
+   "premio": "賞品",
+   "podio": "表彰",
+   "personajes_permitidos": "使用可能キャラ",
+   "rondas": "ラウンドと結果",
+   "ronda": "ラウンド",
+   "jugador_a": "選手 A",
+   "jugador_b": "選手 B",
+   "marcador": "スコア",
+   "video": "录像",
+   "ver": "見る",
+   "todos_pj": "全キャラ",
+   "todos_origenes": "すべての出どころ",
+   "sin_clips": "まだクリップがありません。data/highlights.json か、各大会に入れてください。",
+   "sin_titulo": "無題のクリップ",
+   "reglas_sub": "リーグに参加するために守ること。",
+   "reglas_vacias": "この欄はまだ空です。"
   }
  }
 }

@@ -1,0 +1,22 @@
+{
+  "_notas": [
+    "Torneos de la comunidad. Cada torneo:",
+    "  id         texto corto y unico, sin espacios (se usa en la URL: #/torneo/<id>)",
+    "  nombre     nombre del torneo",
+    "  fecha      texto libre, ej. '2026-03-15' o 'Marzo 2026'",
+    "  formato    'torneo' | 'v2v2' | 'liga'",
+    "  lugar      texto libre, ej. 'Online' o el nombre del bar",
+    "  entradas   numero de participantes (0 si no se sabe)",
+    "  premio     texto libre, ej. '$50.000 + Trofeo'",
+    "  estado     'terminado' | 'en curso' | 'anunciado'",
+    "  personajes lista de ids de personajes.json que se pueden usar",
+    "  podio      lista de { puesto: 1..3, jugador:'', personaje:'<id>', notas:'' }",
+    "  rondas     resultados: { ronda:'', a:'', b:'', marcador:'', pj_a:'', pj_b:'',",
+    "              video:'' }. El video es el clip del duelo, no el torneo entero.",
+    "  video      link de YouTube con /embed/ del torneo COMPLETO",
+    "  highlights clips destacados del torneo:",
+    "              { titulo:'', jugador:'', personaje:'<id>', video:'', nota:'' }"
+  ],
+
+  "torneos": []
+}

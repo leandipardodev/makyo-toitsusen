@@ -35,6 +35,7 @@ PERMITIDAS = {
     "bronze", "star", "stars", "rank", "ranking", "data",
     # nombres propios, comandos de juego y rutas de archivo
     "extras", "handicap", "fightcade", "fbneo", "super", "backstep", "line",
+    "torneos", "highlights", "reglas", "personajes", "circuito", "descargas",
 }
 
 

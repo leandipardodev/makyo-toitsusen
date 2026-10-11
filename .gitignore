@@ -12,3 +12,4 @@ node_modules/
 # lo que se genera al construir
 dist/
 .vercel/
+.vercel

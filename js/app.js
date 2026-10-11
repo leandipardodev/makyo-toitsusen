@@ -3,11 +3,15 @@
    Sin dependencias: solo fetch de los JSON y painters.
    Idiomas: es / en / zh / ja, autodetectado y con selector en la cabecera.
    Rutas:  #/  #/personajes  #/persona/<id>  #/guias  #/matchup
-          #/circuito  #/descargas  #/datos
+          #/torneos  #/torneo/<id>  #/highlights  #/reglas
+          #/circuito  #/descargas
    ========================================================================= */
 
 const app = document.getElementById('app');
-const DATOS = { pers: null, moves: null, circuito: null, extras: null };
+const DATOS = {
+  pers: null, moves: null, circuito: null, extras: null,
+  torneos: null, highlights: null, reglas: null,
+};
 let I18N = {};
 let IDIOMA = 'es';
 
@@ -15,6 +19,14 @@ const IDIOMAS = ['es', 'en', 'zh', 'ja'];
 const NOMBRES_IDIOMA = { es: 'Español', en: 'English', zh: '中文', ja: '日本語' };
 
 const NOTAS = { S: 100, 'A+': 92, A: 82, 'B+': 72, B: 62, 'B−': 55, C: 42, 'C−': 36, D: 22, E: 12 };
+
+/* formatos de torneo y su icono: los mismos que las Copas del circuito */
+const FORMATO_TOR = {
+  torneo: { icono: '🥇', medal: '🥇', clase: 'oro', peso: 'estrella_dorada' },
+  v2v2: { icono: '🥈', medal: '🥈', clase: 'plata', peso: 'estrella_plateada' },
+  liga: { icono: '🏆', medal: '🏆', clase: 'liga', peso: 'liga' },
+};
+const ESTADO_TOR = { terminado: '⏹', 'en curso': '🔴', anunciado: '📅' };
 
 /* --------------------------------------------------------------- traduccion */
 function T(ruta, pordefecto) {
@@ -90,7 +102,8 @@ function chip(origen) {
 /* --------------------------------------------------------------- cabecera */
 const NAV_TEXTO = {
   '#/': 'nav.inicio', '#/personajes': 'nav.personajes', '#/guias': 'nav.guias',
-  '#/matchup': 'nav.matchup', '#/circuito': 'nav.circuito',
+  '#/matchup': 'nav.matchup', '#/torneos': 'nav.torneos', '#/highlights': 'nav.highlights',
+  '#/reglas': 'nav.reglas', '#/circuito': 'nav.circuito',
   '#/descargas': 'nav.descargas'
 };
 
@@ -131,6 +144,9 @@ function vistaInicio() {
       ${tira('luchadores', { n: 11, href: '#/personajes' })}
       ${tira('guias', { n: 8, href: '#/guias' })}
       ${tira('matchup', { n: '11×11', href: '#/matchup' })}
+      ${tira('torneos', { n: (DATOS.torneos.torneos || []).length, href: '#/torneos' })}
+      ${tira('highlights', { n: clipsDeTorneos().length, href: '#/highlights' })}
+      ${tira('reglas', { n: (DATOS.reglas.bloques || []).length, href: '#/reglas' })}
       ${tira('circuito', { n: 3, href: '#/circuito' })}
     </div>
 
@@ -823,6 +839,300 @@ function descargar(nombre, datos) {
   a.click();
 }
 
+/* --------------------------------------------------------------- helpers de
+   torneo: clips, podios y nombres de personaje                        */
+
+/** convierte un link de YouTube normal en el de incrustar */
+function embed(url) {
+  if (!url) return '';
+  if (/youtu\.be\/([^?]+)/.test(url)) return 'https://www.youtube.com/embed/' + url.match(/youtu\.be\/([^?]+)/)[1];
+  if (/\/embed\//.test(url)) return url;
+  const m = url.match(/[?&]v=([^&#]+)/);
+  return m ? 'https://www.youtube.com/embed/' + m[1] : url;
+}
+
+/** id del video, para mostrar la miniatura */
+function ytId(url) {
+  const e = embed(url);
+  const m = e.match(/\/embed\/([^?&#]+)/);
+  return m ? m[1] : '';
+}
+
+function miniatura(url, alt) {
+  const id = ytId(url);
+  if (!id) return '';
+  return `<img loading="lazy" src="https://i.ytimg.com/vi/${id}/hqdefault.jpg" alt="${esc(alt || '')}">`;
+}
+
+/** reproductor con poster; si no hay video, un marco de espera */
+function reproductor(url, titulo, clase) {
+  if (!url) {
+    return `<div class="video-padre sin-video"><div class="play">${esc(T('torneos.sin_video'))}</div></div>`;
+  }
+  return `<div class="video-padre ${clase || ''}">
+    <iframe src="${esc(embed(url))}" title="${esc(titulo || '')}"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen loading="lazy"></iframe></div>`;
+}
+
+/** nombre legible de un id de personaje */
+function nombrePj(id) {
+  const p = pjPorId(id);
+  return p ? p.nombre : (id || '');
+}
+
+/** cartelito con el retrato del personaje */
+function chipPj(id) {
+  const p = pjPorId(id);
+  if (!p) return '';
+  return `<a class="chip-pj" href="#/persona/${p.id}" title="${esc(p.nombre)}">
+    <img src="img/pj_${String(p.pos).padStart(2, '0')}_${p.slug_foto}.png" alt="">
+    <span>${esc(p.nombre)}</span></a>`;
+}
+
+function formatoDe(t) {
+  return FORMATO_TOR[t.formato] || FORMATO_TOR.torneo;
+}
+
+function ordenadoPorFecha(torneos) {
+  return torneos.slice().sort((a, b) => String(b.fecha || '').localeCompare(String(a.fecha || '')));
+}
+
+/* --------------------------------------------------------------- torneos */
+function vistaTorneos() {
+  const lista = ordenadoPorFecha((DATOS.torneos && DATOS.torneos.torneos) || []);
+  const nClips = clipsDeTorneos().length;
+
+  return `<div class="seccion">
+    <h1>${esc(T('torneos.titulo'))}</h1>
+    <p class="sub">${T('torneos.sub')}</p>
+
+    <div class="tiras">
+      <a class="tira" href="#/torneos"><div class="num">${lista.length}</div>
+        <b>${esc(T('torneos.torneos'))}</b><span>${esc(T('torneos.torneos_d'))}</span></a>
+      <a class="tira" href="#/highlights"><div class="num">${nClips}</div>
+        <b>${esc(T('torneos.highlights'))}</b><span>${esc(T('torneos.highlights_d'))}</span></a>
+      <a class="tira" href="#/reglas"><div class="num">${((DATOS.reglas && DATOS.reglas.bloques) || []).length}</div>
+        <b>${esc(T('torneos.reglas'))}</b><span>${esc(T('torneos.reglas_d'))}</span></a>
+    </div>
+
+    <h2>${esc(T('torneos.todos'))}</h2>
+    ${lista.length ? `<div class="rejilla tor">${lista.map(tarjetaTorneo).join('')}</div>`
+      : `<div class="hueco">${T('torneos.vacio')}</div>`}
+  </div>`;
+}
+
+function tarjetaTorneo(t) {
+  const F = formatoDe(t);
+  const tieneVideo = !!t.video;
+  return `<a class="tor" href="#/torneo/${esc(t.id)}">
+    ${tieneVideo
+      ? `<div class="tor-thumb">${miniatura(t.video, t.nombre)}<span class="dur">▶</span></div>`
+      : `<div class="tor-thumb sin-video"><span class="dur">${esc(T('torneos.sin_video'))}</span></div>`}
+    <div class="tor-cuerpo">
+      <div class="tor-linea">
+        <span class="tor-formato ${F.clase}">${F.icono} ${esc(T('torneos.formato_' + t.formato))}</span>
+        <span class="tor-estado">${ESTADO_TOR[t.estado] || ''} ${esc(t.estado || '')}</span>
+      </div>
+      <h3>${esc(t.nombre)}</h3>
+      <p class="sub">${esc(t.fecha || '')}${t.lugar ? ' · ' + esc(t.lugar) : ''}
+        ${t.entradas ? ' · ' + esc(T('torneos.entradas')) + ' ' + t.entradas : ''}</p>
+      ${t.podio && t.podio.length ? `<div class="tor-podio-mini">${t.podio.slice(0, 3).map(p =>
+    `<span class="pp" title="${esc(p.jugador || '')}">${F.medal} ${esc(p.jugador || '')}</span>`).join('')}</div>` : ''}
+      ${t.premio ? `<p class="sub premio">${esc(T('torneos.premio'))}: ${esc(t.premio)}</p>` : ''}
+      ${t.highlights && t.highlights.length
+      ? `<p class="sub nhl">${t.highlights.length} ${esc(T('torneos.highlights'))}</p>` : ''}
+    </div>
+  </a>`;
+}
+
+/** todos los clips: los sueltos + los de cada torneo */
+function clipsDeTorneos() {
+  const salida = [];
+  const ordenados = ordenadoPorFecha((DATOS.torneos && DATOS.torneos.torneos) || []);
+  ordenados.forEach(t => {
+    (t.highlights || []).forEach(h => {
+      salida.push(Object.assign({}, h, {
+        origen: t.nombre, origenId: t.id, fecha: h.fecha || t.fecha,
+      }));
+    });
+  });
+  const sueltos = (DATOS.highlights && DATOS.highlights.clips) || [];
+  sueltos.forEach(h => salida.push(Object.assign({}, h, { suelto: true })));
+  return salida;
+}
+
+function vistaTorneo(id) {
+  const lista = (DATOS.torneos && DATOS.torneos.torneos) || [];
+  const t = lista.find(x => x.id === id);
+  if (!t) {
+    return `<div class="seccion"><h1>${esc(T('no_encontrado'))}</h1>
+      <p><a class="volver" href="#/torneos">${esc(T('volver'))}</a></p></div>`;
+  }
+  const F = formatoDe(t);
+  return `<div class="seccion">
+    <p><a class="volver" href="#/torneos">${esc(T('volver'))}</a></p>
+    <h1>${esc(t.nombre)}</h1>
+    <p class="sub">${esc(t.fecha || '')}${t.lugar ? ' · ' + esc(t.lugar) : ''}</p>
+    <p>
+      <span class="tor-formato ${F.clase}">${F.icono} ${esc(T('torneos.formato_' + t.formato))}</span>
+      ${t.estado ? `<span class="tor-estado">${ESTADO_TOR[t.estado] || ''} ${esc(t.estado)}</span>` : ''}
+    </p>
+
+    <div class="cols">
+      <div>
+        <h2>${esc(T('torneos.video_completo'))}</h2>
+        ${reproductor(t.video, t.nombre)}
+        ${!t.video ? `<p class="sub">${T('torneos.falta_video')}</p>` : ''}
+        ${t.premio ? `<div class="tarjeta"><b>${esc(T('torneos.premio'))}</b>
+          <p>${esc(t.premio)}</p></div>` : ''}
+      </div>
+      <div>
+        ${bloquePodio(t, F)}
+        ${bloquePersonajesTorneo(t)}
+      </div>
+    </div>
+
+    ${bloqueRondas(t)}
+    ${t.highlights && t.highlights.length ? `
+      <h2>${esc(T('torneos.highlights'))}</h2>
+      <p class="sub">${T('torneos.highlights_sub')}</p>
+      <div class="rejilla hl">${t.highlights.map(c => tarjetaClip(c, t.nombre)).join('')}</div>` : ''}
+  </div>`;
+}
+
+function bloquePodio(t, F) {
+  if (!t.podio || !t.podio.length) return '';
+  return `<div class="tarjeta">
+    <h3>${esc(T('torneos.podio'))}</h3>
+    ${t.podio.slice().sort((a, b) => a.puesto - b.puesto).map(p => `
+      <div class="podio-fila">
+        <span class="med">${F.medal}</span>
+        <span class="lugar">${p.puesto}</span>
+        <b>${esc(p.jugador || '')}</b>
+        ${p.personaje ? chipPj(p.personaje) : ''}
+        ${p.notas ? `<span class="sub">${esc(p.notas)}</span>` : ''}
+      </div>`).join('')}
+  </div>`;
+}
+
+function bloquePersonajesTorneo(t) {
+  if (!t.personajes || !t.personajes.length) return '';
+  return `<div class="tarjeta">
+    <h3>${esc(T('torneos.personajes_permitidos'))}</h3>
+    <div class="pjs-chips">${t.personajes.map(chipPj).join('')}</div>
+  </div>`;
+}
+
+function bloqueRondas(t) {
+  if (!t.rondas || !t.rondas.length) return '';
+  return `<h2>${esc(T('torneos.rondas'))}</h2>
+    <div class="tabla-scroll"><table>
+      <thead><tr><th>${esc(T('torneos.ronda'))}</th>
+        <th>${esc(T('torneos.jugador_a'))}</th><th>${esc(T('torneos.jugador_b'))}</th>
+        <th class="num">${esc(T('torneos.marcador'))}</th><th>${esc(T('torneos.video'))}</th></tr></thead>
+      <tbody>${t.rondas.map(r => `<tr>
+        <td>${esc(r.ronda || '')}</td>
+        <td>${esc(r.a || '')}${r.pj_a ? ' ' + chipPj(r.pj_a) : ''}</td>
+        <td>${esc(r.b || '')}${r.pj_b ? ' ' + chipPj(r.pj_b) : ''}</td>
+        <td class="num"><b>${esc(r.marcador || '')}</b></td>
+        <td>${r.video
+      ? `<a class="btn" href="${esc(embed(r.video))}" target="_blank"
+             rel="noopener">${esc(T('torneos.ver'))}</a>`
+      : '—'}</td>
+      </tr>`).join('')}</tbody></table></div>`;
+}
+
+/* --------------------------------------------------------------- highlights */
+function tarjetaClip(h, origen) {
+  /* el clip tiene video: abre el player embebido. no lo tiene: lleva a la
+     pagina del torneo o a la galeria, que es donde se ve la nota */
+  const destino = h.video
+    ? embed(h.video)
+    : (h.suelto ? '#/highlights' : '#/torneo/' + esc(h.origenId));
+  const attrs = h.video ? ' target="_blank" rel="noopener"' : '';
+  return `<a class="clip" href="${destino}"${attrs}
+    data-pj="${esc(h.personaje || '')}" data-orig="${esc(origen || '')}">
+    ${h.video
+      ? `<div class="clip-thumb">${miniatura(h.video, h.titulo)}<span class="dur">▶</span></div>`
+      : `<div class="clip-thumb sin-video"><span class="dur">${esc(T('torneos.sin_video'))}</span></div>`}
+    <div class="clip-cuerpo">
+      <h3>${esc(h.titulo || T('torneos.sin_titulo'))}</h3>
+      <p class="sub">${esc(h.jugador || '')}${h.rival ? ' vs ' + esc(h.rival) : ''}</p>
+      <p class="sub">${h.personaje ? nombrePj(h.personaje) : ''}
+        ${h.pj_rival ? ' vs ' + nombrePj(h.pj_rival) : ''}</p>
+      ${origen ? `<p class="sub origen">${esc(origen)}</p>` : ''}
+      ${h.nota ? `<p class="sub nota">${esc(h.nota)}</p>` : ''}
+    </div>
+  </a>`;
+}
+
+function vistaHighlights() {
+  const clips = clipsDeTorneos();
+  const personajes = Array.from(new Set(
+    clips.map(c => c.personaje).filter(Boolean)))
+    .sort();
+  return `<div class="seccion">
+    <h1>${esc(T('torneos.highlights'))}</h1>
+    <p class="sub">${T('torneos.highlights_sub')}</p>
+
+    <div class="fil">
+      <select id="hl-pj" class="btn">
+        <option value="">${esc(T('torneos.todos_pj'))}</option>
+        ${personajes.map(p => `<option value="${esc(p)}">${esc(nombrePj(p))}</option>`).join('')}
+      </select>
+      <select id="hl-orig" class="btn">
+        <option value="">${esc(T('torneos.todos_origenes'))}</option>
+        ${Array.from(new Set(clips.map(c => c.origen).filter(Boolean)))
+      .map(o => `<option value="${esc(o)}">${esc(o)}</option>`).join('')}
+      </select>
+    </div>
+
+    ${clips.length ? `<div class="rejilla hl" id="hl-lista">${clips.map(c =>
+      tarjetaClip(c, c.origen)).join('')}</div>`
+      : `<div class="hueco">${T('torneos.sin_clips')}</div>`}
+  </div>`;
+}
+
+function conectarHighlights() {
+  const pj = $('#hl-pj'), orig = $('#hl-orig');
+  if (!pj) return;
+  const filtrar = () => {
+    const v1 = pj.value, v2 = orig ? orig.value : '';
+    document.querySelectorAll('#hl-lista .clip').forEach(c => {
+      const ok1 = !v1 || c.dataset.pj === v1;
+      const ok2 = !v2 || c.dataset.orig === v2;
+      c.style.display = ok1 && ok2 ? '' : 'none';
+    });
+  };
+  pj.onchange = filtrar;
+  if (orig) orig.onchange = filtrar;
+}
+
+/* --------------------------------------------------------------- reglas */
+function vistaReglas() {
+  const R = DATOS.reglas || {};
+  const bloques = R.bloques || [];
+  return `<div class="seccion">
+    <h1>${esc(T('torneos.reglas'))}</h1>
+    <p class="sub">${R.intro || T('torneos.reglas_sub')}</p>
+
+    ${bloques.map(b => {
+    const items = b.items || [];
+    const hay = items.length || b.aviso;
+    return `<div class="tarjeta">
+        <h3>${esc(b.icono || '')} ${esc(b.titulo || '')}</h3>
+        ${hay ? `<ul class="reglas">${items.map(it =>
+      typeof it === 'string'
+        ? `<li>${esc(it)}</li>`
+        : `<li><b>${esc(it.t || '')}</b>${it.d ? ' — ' + esc(it.d) : ''}</li>`).join('')}</ul>`
+        : `<div class="hueco">${esc(T('torneos.reglas_vacias'))}</div>`}
+        ${b.aviso ? `<p class="sub aviso">${esc(b.aviso)}</p>` : ''}
+      </div>`;
+  }).join('')}
+  </div>`;
+}
+
 /* --------------------------------------------------------------- descargas */
 function vistaDescargas() {
   const d = DATOS.descargas;
@@ -861,6 +1171,10 @@ function render() {
     else if (sec === 'persona') html = vistaPersona(partes[1]);
     else if (sec === 'guias') html = vistaGuias();
     else if (sec === 'matchup') html = vistaMatchup();
+    else if (sec === 'torneos') html = vistaTorneos();
+    else if (sec === 'torneo') html = vistaTorneo(partes[1]);
+    else if (sec === 'highlights') html = vistaHighlights();
+    else if (sec === 'reglas') html = vistaReglas();
     else if (sec === 'circuito') html = vistaCircuito();
     else if (sec === 'descargas') html = vistaDescargas();
     else html = vistaInicio();
@@ -874,7 +1188,8 @@ function render() {
   conectarMovelist();
   conectarMatchup();
   conectarCircuito();
-  if (sec === 'persona' || sec === 'matchup') window.scrollTo(0, 0);
+  conectarHighlights();
+  if (sec === 'persona' || sec === 'matchup' || sec === 'torneo') window.scrollTo(0, 0);
 }
 
 window.addEventListener('hashchange', render);
@@ -902,10 +1217,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     try { return await (await fetch('data/' + f)).json(); }
     catch (e) { console.error('no se pudo cargar ' + f, e); return null; }
   };
-  const [pers, moves, circuito, descargas, extras, i18n] = await Promise.all([
-    pedir('personajes.json'), pedir('moves.json'), pedir('circuito.json'),
-    pedir('descargas.json'), pedir('extras.json'), pedir('i18n.json')
-  ]);
+  const [pers, moves, circuito, descargas, extras, i18n, torneos, highlights, reglas] =
+    await Promise.all([
+      pedir('personajes.json'), pedir('moves.json'), pedir('circuito.json'),
+      pedir('descargas.json'), pedir('extras.json'), pedir('i18n.json'),
+      pedir('torneos.json'), pedir('highlights.json'), pedir('reglas.json')
+    ]);
 
   I18N = i18n || {};
   IDIOMA = detectarIdioma();
@@ -917,6 +1234,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   };
   DATOS.descargas = descargas || { categorias: [] };
   DATOS.extras = extras || {};
+  DATOS.torneos = torneos || { torneos: [] };
+  DATOS.highlights = highlights || { clips: [] };
+  DATOS.reglas = reglas || { bloques: [] };
   DATOS.pers.forEach(p => {
     p.extras = DATOS.extras[p.id] || {};
     p.slug_foto = (p.retrato.match(/_([^_]+)\.png$/) || [])[1] || p.id;
