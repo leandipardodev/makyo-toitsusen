@@ -10,6 +10,23 @@ Sin dependencias, sin build: HTML, CSS y JavaScript plano.
 
 **Código:** <https://github.com/leandipardodev/makyo-toitsusen>
 
+## Publicar un cambio
+
+Vercel está conectado al repo: **cada `git push` a `main` despliega solo**, sin
+ejecutar nada. El build tarda unos 30 segundos.
+
+```
+git add -A
+git commit -m "lo que cambié"
+git push
+```
+
+Después de unos 30 segundos está arriba. Para verlo antes, el despliegue se puede
+revisar en la pestaña Deployments del proyecto en Vercel.
+
+Un collaborator con acceso de escritura al repo puede hacer exactamente lo mismo:
+no hace falta ser dueño de Vercel para que su push llegue a producción.
+
 ## Cómo se ve
 
 ```
