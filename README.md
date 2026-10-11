@@ -8,6 +8,8 @@ Sin dependencias, sin build: HTML, CSS y JavaScript plano.
 
 **En vivo:** <https://makyo-toitsusen.vercel.app>
 
+**Código:** <https://github.com/leandipardodev/makyo-toitsusen>
+
 ## Cómo se ve
 
 ```
