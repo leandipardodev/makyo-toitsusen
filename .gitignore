@@ -1,0 +1,14 @@
+# nada de esto va al repo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# node / editores
+node_modules/
+.vscode/
+.idea/
+*.swp
+
+# lo que se genera al construir
+dist/
+.vercel/

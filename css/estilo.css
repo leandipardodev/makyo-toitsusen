@@ -1,0 +1,423 @@
+/* =========================================================================
+   MAKYOU TOITSUSEN — hoja de estilo
+   Paleta: noche, indigo, ambar y oro (la misma rampa que se aplico a las
+   capturas del juego con tools/duotono.py, para que todo parezca del mismo
+   sitio).
+   ========================================================================= */
+
+:root{
+  --noche:#080a14;
+  --noche2:#0d1024;
+  --panel:#12162e;
+  --panel2:#171c38;
+  --linea:#252c52;
+  --texto:#e8ecf8;
+  --apagado:#9aa3c7;
+  --oro:#ffc861;
+  --oro2:#ff9d3c;
+  --indigo:#5b6cff;
+  --cian:#4ad8ff;
+  --oro-claro:#ffe6ad;
+  --verde:#54e39a;
+  --rojo:#ff5d6c;
+  --radio:14px;
+  --sombra:0 18px 50px rgba(0,0,0,.55);
+  --max:1180px;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:
+    radial-gradient(1200px 700px at 80% -10%, #1a2050 0%, transparent 60%),
+    radial-gradient(900px 600px at 0% 10%, #241a3e 0%, transparent 55%),
+    var(--noche);
+  color:var(--texto);
+  font-family:"Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;
+  font-size:16px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  min-height:100vh;
+}
+
+/* lineas de barrido, muy suaves, dan aire de arcade */
+.scanlines{
+  position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.5;
+  background:repeating-linear-gradient(to bottom,rgba(255,255,255,.018) 0 1px,transparent 1px 3px);
+  mix-blend-mode:overlay;
+}
+
+/* ------------------------------------------------------------- cabecera */
+.cabecera{
+  position:sticky;top:0;z-index:40;
+  display:flex;align-items:center;gap:18px;
+  padding:12px 22px;
+  background:rgba(8,10,20,.82);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--linea);
+}
+.marca{display:flex;align-items:center;gap:12px;min-width:0}
+.marca .kanji{
+  font-size:30px;color:var(--oro);
+  text-shadow:0 0 18px rgba(255,200,97,.45);
+  line-height:1;
+}
+.marca-txt{display:flex;flex-direction:column;line-height:1.15;min-width:0}
+.marca-txt b{letter-spacing:.16em;font-size:14px}
+.marca-txt small{color:var(--apagado);font-size:11px;letter-spacing:.06em}
+
+.menu{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap}
+.menu a{
+  color:var(--apagado);text-decoration:none;font-size:13px;letter-spacing:.05em;
+  padding:8px 13px;border-radius:999px;border:1px solid transparent;white-space:nowrap;
+  transition:.18s;
+}
+.menu a:hover{color:var(--texto);background:rgba(255,255,255,.05)}
+.menu a.on{
+  color:#0a0c18;background:linear-gradient(135deg,var(--oro),var(--oro2));
+  font-weight:700;box-shadow:0 6px 22px rgba(255,157,60,.3);
+}
+.hamburguesa{
+  display:none;margin-left:auto;background:transparent;border:1px solid var(--linea);
+  color:var(--texto);font-size:20px;border-radius:10px;padding:4px 10px;cursor:pointer;
+}
+
+/* selector de idioma */
+.selector-idioma{
+  background:rgba(255,255,255,.05);color:var(--texto);
+  border:1px solid var(--linea);border-radius:999px;
+  padding:7px 10px;font-size:13px;cursor:pointer;font-family:inherit;
+  transition:.18s;
+}
+.selector-idioma:hover{border-color:var(--oro);color:var(--oro)}
+.selector-idioma option{background:#12162c;color:var(--texto)}
+
+/* ------------------------------------------------------------- estructura */
+.app{max-width:var(--max);margin:0 auto;padding:26px 22px 70px}
+.seccion{animation:entra .32s ease both}
+@keyframes entra{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+h1,h2,h3,h4{line-height:1.15;margin:0 0 .5em}
+h1{font-size:clamp(28px,5vw,50px);letter-spacing:-.02em}
+h2{font-size:clamp(20px,3vw,30px);margin-top:1.4em}
+h3{font-size:19px;color:var(--oro)}
+h4{font-size:15px;letter-spacing:.08em;text-transform:uppercase;color:var(--apagado)}
+p{margin:0 0 1em}
+a{color:var(--cian)}
+
+.sub{color:var(--apagado);max-width:70ch}
+.centro{text-align:center}
+.kicker{letter-spacing:.28em;text-transform:uppercase;font-size:11px;color:var(--oro2)}
+
+/* ------------------------------------------------------------- portada */
+.hero{
+  position:relative;border-radius:22px;overflow:hidden;border:1px solid var(--linea);
+  box-shadow:var(--sombra);margin-bottom:34px;
+  background:#0a0c18;
+}
+.hero img{
+  width:100%;height:clamp(280px,42vw,470px);object-fit:cover;object-position:50% 22%;
+  display:block;image-rendering:pixelated;opacity:.55;
+}
+.hero-texto{
+  position:absolute;inset:auto 0 0 0;padding:34px;
+  background:linear-gradient(to top,rgba(8,10,20,.97),rgba(8,10,20,.75) 55%,transparent);
+}
+.hero h1{margin:0 0 6px;text-shadow:0 4px 30px #000}
+.hero p{margin:0;max-width:62ch;color:#cfd6ee}
+
+.tiras{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.tira{
+  border:1px solid var(--linea);border-radius:var(--radio);padding:18px 20px;
+  background:linear-gradient(180deg,var(--panel),var(--noche2));
+  text-decoration:none;color:inherit;transition:.2s;
+}
+.tira:hover{transform:translateY(-3px);border-color:var(--oro);box-shadow:0 14px 34px rgba(0,0,0,.45)}
+.tira b{display:block;font-size:17px;margin-bottom:4px}
+.tira span{color:var(--apagado);font-size:13px}
+.tira .num{font-size:30px;color:var(--oro);font-weight:800;line-height:1}
+
+.dato{display:flex;gap:14px;align-items:baseline;padding:10px 0;border-bottom:1px dashed var(--linea)}
+.dato:last-child{border:0}
+.dato b{min-width:150px;color:var(--oro);font-size:13px;letter-spacing:.04em}
+.dato span{color:#cfd6ee;font-size:14px}
+
+/* ------------------------------------------------------------- rejilla de personajes */
+.rejilla{display:grid;gap:18px;grid-template-columns:repeat(auto-fill,minmax(215px,1fr))}
+.pj{
+  position:relative;border:1px solid var(--linea);border-radius:var(--radio);
+  overflow:hidden;text-decoration:none;color:inherit;background:var(--panel);
+  transition:.22s;
+}
+.pj:hover{transform:translateY(-5px);border-color:var(--oro2);box-shadow:0 20px 44px rgba(0,0,0,.5)}
+.pj .arte{
+  height:270px;background:#0a0c18 bottom center/contain no-repeat;
+  image-rendering:pixelated;position:relative;
+  border-bottom:1px solid var(--linea);
+}
+.pj:hover .arte{background-color:#10142c}
+.pj .arte::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(8,10,20,.95),transparent 62%);
+}
+.pj .cuerpo{padding:14px 16px 18px;position:relative}
+.pj h3{margin:0 0 2px;font-size:18px}
+.pj .lema{color:var(--apagado);font-size:12px;margin:0 0 10px;min-height:2.4em}
+.pj .notas{display:flex;gap:6px;flex-wrap:wrap}
+.nota-mini{
+  font-size:10px;letter-spacing:.06em;padding:3px 8px;border-radius:999px;
+  border:1px solid var(--linea);color:var(--apagado);background:rgba(255,255,255,.03);
+}
+.nota-mini b{color:var(--oro)}
+.pos{
+  position:absolute;top:10px;left:10px;z-index:2;
+  background:rgba(8,10,20,.8);border:1px solid var(--oro);color:var(--oro);
+  font-size:11px;font-weight:800;padding:2px 8px;border-radius:999px;
+}
+
+/* ------------------------------------------------------------- ficha */
+.ficha-cabecera{
+  display:grid;grid-template-columns:260px 1fr;gap:26px;align-items:start;
+  border:1px solid var(--linea);border-radius:18px;padding:22px;
+  background:linear-gradient(180deg,var(--panel2),var(--noche2));margin-bottom:26px;
+}
+.ficha-cabecera .arte{
+  border-radius:12px;overflow:hidden;border:1px solid var(--linea);background:#0a0c18;
+}
+.ficha-cabecera .arte img{
+  width:100%;height:340px;object-fit:contain;object-position:50% 100%;
+  display:block;image-rendering:pixelated;background:#0a0c18;
+}
+.ficha-titulo h1{margin:0}
+.ficha-titulo .kana{color:var(--oro2);letter-spacing:.2em;font-size:14px}
+
+.notas{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}
+.nota{
+  border:1px solid var(--linea);border-radius:12px;padding:10px 14px;
+  background:rgba(255,255,255,.03);min-width:96px;
+}
+.nota b{display:block;color:var(--oro);font-size:20px;line-height:1.1}
+.nota span{color:var(--apagado);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+
+/* display:block es imprescindible: si no, el span es inline y la altura no
+   se aplica (las barras salian como manchas) */
+.barra{display:block;width:100%;height:7px;border-radius:99px;background:rgba(255,255,255,.07);overflow:hidden;margin-top:4px}
+.barra i{display:block;height:100%;background:linear-gradient(90deg,var(--oro2),var(--oro));border-radius:99px}
+.barra.b i{background:linear-gradient(90deg,var(--indigo),var(--cian))}
+
+.cols{display:grid;gap:24px;grid-template-columns:1fr 1fr}
+@media(max-width:860px){.cols{grid-template-columns:1fr}.ficha-cabecera{grid-template-columns:1fr}}
+
+.tarjeta{
+  border:1px solid var(--linea);border-radius:var(--radio);padding:20px 22px;
+  background:linear-gradient(180deg,var(--panel),var(--noche2));margin:18px 0;
+}
+.tarjeta h3{margin-top:0}
+
+/* ------------------------------------------------------------- tablas */
+.tabla-scroll{overflow-x:auto;border-radius:12px;border:1px solid var(--linea)}
+table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:520px}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid rgba(255,255,255,.06)}
+th{
+  position:sticky;top:0;background:var(--panel2);color:var(--oro);
+  font-size:11px;letter-spacing:.1em;text-transform:uppercase;z-index:1;white-space:nowrap;
+}
+tbody tr:hover{background:rgba(255,255,255,.035)}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+.tag{
+  font-size:10px;padding:2px 7px;border-radius:999px;border:1px solid var(--linea);
+  color:var(--apagado);white-space:nowrap;
+}
+.tag.super{border-color:var(--oro);color:var(--oro)}
+.tag.hold{border-color:var(--cian);color:var(--cian)}
+.tag.dmg{border-color:var(--rojo);color:var(--rojo)}
+
+/* barra de dano dentro de la tabla */
+.barra-dmg{height:6px;border-radius:99px;background:rgba(255,255,255,.08);min-width:54px}
+.barra-dmg i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#ff5d6c,#ffc861)}
+
+/* ------------------------------------------------------------- chips de origen */
+.chip{
+  font-size:10px;letter-spacing:.1em;padding:2px 8px;border-radius:999px;
+  border:1px solid var(--linea);color:var(--apagado);text-transform:uppercase;
+}
+.chip-rom{border-color:var(--verde);color:var(--verde)}
+.chip-web{border-color:var(--oro);color:var(--oro)}
+.chip-med{border-color:var(--cian);color:var(--cian)}
+
+.frases{font-style:italic;color:#c6cee8}
+.frases li{margin-bottom:6px}
+
+/* ------------------------------------------------------------- arbol */
+.arbol{display:grid;gap:14px;margin:18px 0}
+.rama{
+  border:1px solid var(--linea);border-left:3px solid var(--oro);border-radius:12px;
+  padding:14px 18px;background:rgba(255,255,255,.02);
+}
+.rama h4{color:var(--oro);margin:0 0 8px}
+.rama ol{margin:0;padding-left:20px}
+.rama li{margin-bottom:6px;font-size:14px}
+.rama .nivel{color:var(--oro2);font-weight:700;margin-right:6px}
+
+/* combo */
+.combo{
+  display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:10px 14px;
+  border:1px solid var(--linea);border-radius:10px;margin-bottom:8px;background:rgba(255,255,255,.02);
+}
+.combo .sec{font-size:11px;color:var(--apagado);min-width:60px}
+.combo kbd{
+  background:var(--panel2);border:1px solid var(--linea);border-bottom-width:2px;
+  border-radius:6px;padding:2px 7px;font-size:12px;color:var(--oro-claro);
+  font-family:inherit;
+}
+.combo .dmg{margin-left:auto;color:var(--rojo);font-size:12px}
+
+/* ------------------------------------------------------------- circuito */
+.podio{display:grid;gap:14px;grid-template-columns:repeat(3,1fr);margin:20px 0}
+@media(max-width:800px){.podio{grid-template-columns:1fr}}
+.puesto{
+  border:1px solid var(--linea);border-radius:var(--radio);padding:20px;text-align:center;
+  background:linear-gradient(180deg,var(--panel),var(--noche2));position:relative;overflow:hidden;
+}
+.puesto .icono{font-size:34px;line-height:1}
+.puesto b{display:block;font-size:18px;margin:6px 0 2px}
+.puesto .peso{color:var(--apagado);font-size:12px}
+.puesto.oro{border-color:var(--oro);box-shadow:0 0 0 1px rgba(255,200,97,.25),0 18px 44px rgba(255,157,60,.12)}
+.puesto.plata{border-color:#c8d0dc}
+.puesto.bronce{border-color:#c98a4b}
+
+.ranking td.escudo{font-weight:800;color:var(--oro)}
+.insignias{white-space:nowrap;letter-spacing:2px}
+.insignias span{cursor:help}
+.medalla{font-weight:800}
+.oro-m{color:var(--oro)}
+.plata-m{color:#d8dfea}
+.bronce-m{color:#d09a5c}
+
+.barra-puntos{height:9px;border-radius:99px;background:rgba(255,255,255,.07);overflow:hidden;min-width:120px}
+.barra-puntos i{display:block;height:100%;background:linear-gradient(90deg,var(--oro2),var(--oro))}
+
+/* ------------------------------------------------------------- matchup */
+/* la matriz son 12 columnas (11 personajes + el encabezado de fila): para que
+   entre sin scroll horizontal el ancho se reparte con percentages y las
+   columnas se vuelven estrechas */
+.matriz-wrap{overflow:visible}
+.matriz{
+  width:100%;table-layout:fixed;border-collapse:separate;
+  border-spacing:2px;font-size:12px;
+}
+.matriz th{
+  background:transparent;color:var(--oro);font-weight:600;font-size:11px;
+  padding:6px 2px;text-align:left;white-space:nowrap;
+  overflow:hidden;text-overflow:ellipsis;
+}
+.matriz th.fila{
+  position:sticky;left:0;background:#0d1024;z-index:2;
+  border-right:1px solid var(--linea);width:74px;
+}
+.matriz thead th{text-align:center;vertical-align:bottom}
+.celda{position:relative;padding:0;background:rgba(255,255,255,.03)}
+.celda.diagonal{
+  background:transparent;color:var(--apagado);text-align:center;
+  font-size:11px;opacity:.35;
+}
+.celda input{
+  width:100%;height:34px;border:0;background:transparent;color:var(--texto);
+  text-align:center;font:700 15px ui-monospace,Consolas,monospace;
+  border-radius:8px;outline:none;transition:.15s;
+  -moz-appearance:textfield;
+}
+.celda input::-webkit-outer-spin-button,
+.celda input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.celda input:focus{background:rgba(255,200,97,.16);box-shadow:inset 0 0 0 1px var(--oro)}
+.celda input::placeholder{color:rgba(255,255,255,.16)}
+.pie-celda{
+  display:block;text-align:center;font-size:9px;line-height:1.2;
+  padding:0 2px 5px;color:var(--apagado);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+
+/* color por fuerza de la calificacion */
+.celda.cal-mdebil{background:rgba(255,93,108,.16)}
+.celda.cal-debil{background:rgba(255,93,108,.1)}
+.celda.cal-encontra{background:rgba(255,150,80,.09)}
+.celda.cal-parejo{background:rgba(255,255,255,.04)}
+.celda.cal-afavor{background:rgba(120,220,160,.09)}
+.celda.cal-fuerte{background:rgba(52,199,123,.12)}
+.celda.cal-mfuerte{background:rgba(52,199,123,.2)}
+.celda.cal-mdebil input,.celda.cal-debil input{color:#ffb0b8}
+.celda.cal-mfuerte input,.celda.cal-fuerte input{color:#8ff0bd}
+
+/* las celdas automaticas se marcan con un puntito: avisa que no es medido */
+.celda.auto::after{
+  content:"";position:absolute;top:3px;right:3px;
+  width:4px;height:4px;border-radius:50%;background:var(--oro2);opacity:.6;
+}
+
+.escala{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.escala .celda{
+  padding:6px 12px;border-radius:8px;font-size:12px;text-align:center;
+}
+.escala .celda b{font-weight:600}
+
+/* ------------------------------------------------------------- descargas */
+.desc{
+  display:flex;gap:16px;align-items:center;border:1px solid var(--linea);
+  border-radius:var(--radio);padding:16px 18px;margin-bottom:10px;
+  background:linear-gradient(180deg,var(--panel),var(--noche2));transition:.18s;
+}
+.desc:hover{border-color:var(--oro2)}
+.desc .icono{font-size:26px;width:38px;text-align:center}
+.desc .cuerpo{flex:1;min-width:0}
+.desc b{display:block}
+.desc p{margin:2px 0 0;color:var(--apagado);font-size:13px}
+.btn{
+  display:inline-block;border:1px solid var(--linea);border-radius:10px;
+  padding:8px 14px;font-size:13px;text-decoration:none;color:var(--texto);
+  background:rgba(255,255,255,.04);white-space:nowrap;transition:.18s;cursor:pointer;
+}
+.btn:hover{border-color:var(--oro);color:var(--oro)}
+.btn.oro{background:linear-gradient(135deg,var(--oro),var(--oro2));color:#0a0c18;font-weight:700;border:0}
+.btn:disabled,.btn.vacio{opacity:.4;cursor:not-allowed}
+
+/* aviso de hueco */
+.hueco{
+  border:1px dashed var(--oro);border-radius:12px;padding:16px 18px;margin:14px 0;
+  background:rgba(255,200,97,.05);color:#f0e2c0;font-size:14px;
+}
+.hueco b{color:var(--oro)}
+
+/* video */
+.video{
+  aspect-ratio:16/9;border-radius:12px;border:1px solid var(--linea);
+  background:#06070f center/cover no-repeat;display:grid;place-items:center;
+  color:var(--apagado);text-align:center;gap:8px;padding:16px;position:relative;overflow:hidden;
+}
+.video .play{font-size:44px;color:var(--oro);opacity:.7}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* utilidades */
+.oculto{display:none!important}
+.fil{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:14px 0}
+input[type=search],input[type=text]{
+  background:var(--panel2);border:1px solid var(--linea);border-radius:10px;
+  color:var(--texto);padding:9px 12px;font:inherit;font-size:14px;min-width:200px;
+}
+input:focus{outline:none;border-color:var(--oro)}
+.volver{color:var(--apagado);text-decoration:none;font-size:13px}
+.volver:hover{color:var(--oro)}
+.pie{
+  border-top:1px solid var(--linea);padding:26px 22px 40px;text-align:center;
+  color:var(--apagado);font-size:13px;
+}
+.pie b{color:var(--oro);letter-spacing:.1em}
+.pie-nota{margin-top:8px}
+
+@media(max-width:760px){
+  .menu{
+    display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;
+    background:rgba(8,10,20,.98);border-bottom:1px solid var(--linea);padding:10px;
+  }
+  .menu.abierto{display:flex}
+  .hamburguesa{display:block}
+  .app{padding:18px 14px 60px}
+}

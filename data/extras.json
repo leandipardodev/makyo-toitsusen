@@ -1,0 +1,17 @@
+{
+ "_como": {
+  "video": "Enlace de YouTube con /embed/ al final. Ejemplo: https://www.youtube.com/embed/XXXX. Se muestra en un iframe en la ficha del personaje.",
+  "lore": "Texto de lore del personaje (3-6 párrafos). Sale en la ficha."
+ },
+ "sensui": { "video": "", "lore": "" },
+ "jin": { "video": "", "lore": "" },
+ "itsuki": { "video": "", "lore": "" },
+ "genkai": { "video": "", "lore": "" },
+ "kuwabara": { "video": "", "lore": "" },
+ "yusuke": { "video": "", "lore": "" },
+ "kurama": { "video": "", "lore": "" },
+ "hiei": { "video": "", "lore": "" },
+ "chui": { "video": "", "lore": "" },
+ "toguro_mayor": { "video": "", "lore": "" },
+ "toguro_menor": { "video": "", "lore": "" }
+}

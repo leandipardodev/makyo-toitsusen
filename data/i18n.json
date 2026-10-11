@@ -1,0 +1,1527 @@
+{
+ "_nota": "Traducciones de toda la interfaz. El idioma se detecta solo con el navegador y se puede cambiar arriba a la derecha; la eleccion se guarda. Los datos de las fichas (nombres de especiales, frases) vienen del documento fuente en castellano y no se traducen: lo marcado como 'fuente: ES' se queda en el idioma original.",
+ "es": {
+  "idioma": "Español",
+  "sigla": "ES",
+  "nav": {
+   "inicio": "Inicio",
+   "personajes": "Luchadores",
+   "guias": "Guías",
+   "circuito": "Circuito",
+   "descargas": "Descargas",
+   "matchup": "Matchup"
+  },
+  "volver": "← todos los luchadores",
+  "portada": {
+   "titulo": "La guía de los que lo desmontaron",
+   "bajada": "Frame data sacada del propio ROM, no de ninguna guía. Todo lo que hay aquí está verificado en el código del juego o marcado como <span class=\"chip chip-web\">web</span> cuando viene de fuera.",
+   "primero": "Lo primero que hay que saber",
+   "los_once": "Los once"
+  },
+  "tiras": {
+   "luchadores": {
+    "t": "Luchadores",
+    "d": "fichas, especiales, frame data y árbol de aprendizaje"
+   },
+   "guias": {
+    "t": "Guías generales",
+    "d": "sistema, controles, secretos y entrenamiento"
+   },
+   "circuito": {
+    "t": "Circuito",
+    "d": "torneo argentino, liga y 2 contra 2"
+   },
+   "matchup": {
+    "t": "Matchup",
+    "d": "quién le gana a quién, anotado a mano"
+   },
+   "datos": {
+    "t": "Movimientos",
+    "d": "leídos del ROM, con inicio, activo y recuperación"
+   }
+  },
+  "datos_clave": [
+   [
+    "Vida máxima",
+    "255 puntos. No son 223: ese número es el tope del maná y fue el error más repetido de las guías del juego."
+   ],
+   [
+    "Maná (TA)",
+    "223 como máximo. Sirve para pagar especiales y el super."
+   ],
+   [
+    "Umbral de vida baja",
+    "111. Por debajo, el personaje entra en modo débil."
+   ],
+   [
+    "Botones",
+    "<b>B</b> golpe débil · <b>A</b> golpe fuerte · <b>C</b> defenderse. Con mando de 6 botones: <b>X</b> backstep, <b>Y</b> cambio de línea, <b>Z</b> dash."
+   ],
+   [
+    "Super",
+    "se habilita con la vida a la mitad o menos <b>y</b> el maná lleno."
+   ],
+   [
+    "Secreto",
+    "en OPTIONS, <b>A + C + START</b> abre el modo debug."
+   ]
+  ],
+  "personajes": {
+   "titulo": "Luchadores",
+   "sub": "Ordenados por ataque. Las notas van de <b>S</b> a <b>E</b>: no son números, son la graduación de las fichas originales.",
+   "nota": "Nota: en el ROM, <b>Kurama e Itsuki</b> comparten tabla de movimientos y <b>Chui y Yusuke</b> también (mismos golpes, misma tabla). Son cuatro entradas en la pantalla de selección pero dos luchadores.",
+   "ordenar": "Orden:"
+  },
+  "ficha": {
+   "pos": "Posición",
+   "en_pantalla": "en la pantalla de selección",
+   "numeros": "Números",
+   "contexto": "Contexto en el ROM:",
+   "golpes_normales": "Golpes normales",
+   "nota_fuentes": "nombres y comandos de la ficha; el daño se cruzó con la tabla del ROM.",
+   "especiales": "Especiales",
+   "super": "Super",
+   "comando_super": "Comando del super:",
+   "video": "Vídeo",
+   "falta_video": "Falta el vídeo. Se pega un enlace de YouTube en <code>data/extras.json</code>, campo <code>video</code> de este personaje. Mientras se cargue sale este marco.",
+   "lore": "Lore",
+   "falta_lore": "Falta el texto de lore. Se escribe en <code>data/extras.json</code>, campo <code>lore</code>. Mientras tanto, lo verificado es esto: su papel en el juego es",
+   "arbol": "Árbol de aprendizaje",
+   "arbol_sub": "Orden pensado para no comerse el maná antes de la ronda 2. Los niveles salen del coste de maná de cada técnica.",
+   "nivel1": "Nivel 1 — La base",
+   "nivel1_txt": "Aprendé a encadenar golpes cancelables y a situarte.",
+   "nivel2": "Nivel 2 — Especiales baratos",
+   "nivel3": "Nivel 3 — Especiales caros",
+   "nivel3_txt": "Con estos ya estás gastando maná de verdad: pensá qué te vas a guardar para el super.",
+   "nivel4": "Nivel 4 — El super",
+   "nivel4_txt": "Necesita vida a la mitad o menos <b>y</b> maná lleno.",
+   "combos": "Combos",
+   "combos_sub": "Los combos verificados los metés vos: escribilos abajo y quedan guardados en este navegador. Los que salen por defecto son propuestas generadas a partir de los golpes cancelables, así que pueden no funcionar tal cual.",
+   "tus_combos": "Tus combos",
+   "vacio_combos": "Todavía no hay ninguno cargado.",
+   "notacion": "notación, p. ej. 2A > ↓↘+B > ↓↓+A",
+   "nota_op": "nota (opcional)",
+   "anadir": "Añadir",
+   "vaciar": "Vaciar",
+   "proponer": "proponer",
+   "propuestas": "Propuestas para probar",
+   "propuestas_sub": "generadas a partir de los golpes cancelables y los especiales más caros.",
+   "frases": "Lo que dice",
+   "framedata": "Frame data desde el ROM",
+   "framedata_sub": "Leído de la tabla de animación de cada personaje. <b>Activo</b> son los frames que tienen daño; <b>recuperación</b>, los que van después del último. Solo se listan los movimientos que hacen daño.",
+   "filtrar_id": "filtrar por id (p. ej. A0)",
+   "dmg_min": "daño mínimo",
+   "ord_dmg": "ordenar por daño",
+   "ord_startup": "ordenar por inicio",
+   "ord_stun": "ordenar por stun",
+   "ord_id": "ordenar por id",
+   "col_move": "Move",
+   "col_tipo": "Tipo",
+   "col_inicio": "Inicio",
+   "col_activo": "Activo",
+   "col_recup": "Recup.",
+   "col_total": "Total",
+   "col_dmg": "Daño",
+   "col_stun": "Stun",
+   "mantener": "mantener",
+   "golpes": "golpes",
+   "especial": "especial",
+   "normal": "normal",
+   "de_dano": "de daño",
+   "col_altura": "Altura",
+   "col_efecto": "Efecto",
+   "col_cancel": "Cancelable",
+   "col_tecnica": "Técnica",
+   "col_comando": "Comando",
+   "regen": "Regeneración",
+   "vida_hp": "Vida / HP",
+   "mana": "Maná"
+  },
+  "notas": {
+   "Ataque": "Ataque",
+   "Defensa": "Defensa",
+   "Velocidad": "Velocidad",
+   "Salto": "Salto",
+   "Global": "Global",
+   "ATQ": "ATQ",
+   "DEF": "DEF",
+   "VEL": "VEL",
+   "STUN": "STUN"
+  },
+  "guias": [
+   {
+    "t": "El sistema de combate",
+    "c": "rom",
+    "d": "Lo mínimo para no ir perdido",
+    "h": [
+     [
+      "Vida, maná y aturdimiento",
+      "<p>La vida va hasta <b>255</b>. El maná, hasta <b>223</b>. Por debajo de <b>111 de vida</b> el luchador entra en modo débil: parpadea y suena el aviso.</p><p>El aturdimiento (stun) es lo que te permite encadenar: cada golpe le quita frames de stun al rival, y si le quitas más de los que su personaje tiene de reserva, se le para todo.</p>"
+     ],
+     [
+      "Cancelar",
+      "<p>Cancelar es encadenar un golpe débil dentro de la animación del fuerte. De ahí salen los combos largos. En las tablas de cada ficha, la columna <b>Cancelable</b> te dice qué golpes lo permiten.</p><p>Hay golpes que <b>no</b> se cancelan. Ahí no hay combo posible.</p>"
+     ],
+     [
+      "Planos",
+      "<p>Hay dos planos de profundidad y se cruzan: los personajes pueden pasar por delante y por detrás el uno del otro. Eso cambia qué golpe conecta.</p>"
+     ],
+     [
+      "Agarre",
+      "<p>El agarre flota al rival. El juego decide si dos personajes pueden agarrarse comparando un campo cuyo significado todavía no está cerrado. Por eso hay combinaciones que no se pueden agarrar entre sí.</p>"
+     ]
+    ]
+   },
+   {
+    "t": "Controles",
+    "c": "rom",
+    "d": "Mando de 3 y de 6 botones",
+    "h": [
+     [
+      "Botones",
+      "<p><b>B</b> golpe débil · <b>A</b> golpe fuerte · <b>C</b> defenderse.</p><p>Con mando de 6 botones: <b>X</b> backstep, <b>Y</b> cambio de línea, <b>Z</b> dash. El dash se hace con dos toques de dirección, y hay dash adelante y atrás.</p>"
+     ],
+     [
+      "Defenderse",
+      "<p>El botón <b>C</b> es defenderse, y el golpe que corresponde tiene 64 de stun: ese 64 es el stun de bloqueo. Es el mayor del juego después del de Jin.</p>"
+     ],
+     [
+      "Super",
+      "<p>Se desbloquea con la <b>vida a la mitad o menos</b> y el <b>maná lleno</b>. Cada personaje lo tiene a un comando distinto; están en su ficha.</p>"
+     ]
+    ]
+   },
+   {
+    "t": "Entrenamiento",
+    "c": "med",
+    "d": "Cómo practicar sin perder tiempo",
+    "h": [
+     [
+      "Lista de dos puntos",
+      "<ol><li>Un único botón: parado <b>B</b>, parado <b>A</b>, abajo <b>B</b>, abajo <b>A</b>.</li><li>Dash adelante y atrás hasta que salga solo.</li><li>Los tres especiales que gasten menos maná.</li><li>Un combo corto con el special más barato.</li><li>El super, con la vida a la mitad.</li></ol>"
+     ],
+     [
+      "Modo debug",
+      "<p>En OPTIONS, mantener <b>A + C + START</b>. Da vida llena y vida crítica a los jugadores, y activa el <i>hit-time</i> para ver los frames de impacto.</p>"
+     ]
+    ]
+   },
+   {
+    "t": "Secretos",
+    "c": "rom",
+    "d": "Lo que hay escondido",
+    "h": [
+     [
+      "Modo handicap",
+      "<p>Hay un modo oculto que se desbloquea limpiando el modo debug.</p>"
+     ],
+     [
+      "Cámaras",
+      "<p>El juego solo barre 240 de los 320 píxeles de pantalla, pero el escenario sigue a la cámara y <b>se repite al infinito</b>: con una herramienta externa se puede mover la cámara a donde quieras y ver escenarios que nunca se ven jugando normal.</p>"
+     ]
+    ]
+   },
+   {
+    "t": "Cómo leer el frame data",
+    "c": "rom",
+    "d": "Lo que significan las columnas",
+    "h": [
+     [
+      "Inicio, activo, recuperación",
+      "<p><b>Inicio</b> (startup) son los frames desde que pulsás el botón hasta que el golpe hace daño. <b>Activo</b> son los frames que hace daño. <b>Recuperación</b> son los que pasa después hasta que podés actuar otra vez.</p><p>Un golpe con mucho inicio y poco activo es más seguro y menos rentable. La mayoría de los combos son inicio contra inicio del rival.</p>"
+     ],
+     [
+      "Por qué no hay tablas en internet",
+      "<p>Porque este juego salió solo en Japón en 1994 y no hubo cultura de datamining. Lo único serio es el ROM, y de ahí salen los números de esta web.</p>"
+     ]
+    ]
+   },
+   {
+    "t": "Luchar mejor",
+    "c": "web",
+    "d": "Planos y espacio",
+    "h": [
+     [
+      "Mandar a la pared",
+      "<p>Los personajes no se pueden salir del escenario. Apropiarse del rival contra la pared recorta un lado de su huida.</p>"
+     ],
+     [
+      "Aire",
+      "<p>Los golpes aéreos hacen menos daño y mucho menos stun que los de suelo, pero muchos especiales solo salen en el aire.</p>"
+     ]
+    ]
+   }
+  ],
+  "circuito": {
+   "titulo": "Circuito competitivo",
+   "podio": "Estrella dorada",
+   "podio2": "Estrella plateada",
+   "podio3": "Liga",
+   "p1d": "campeón del torneo",
+   "p2d": "campeón 2 contra 2",
+   "p3d": "el reconocimiento mayor",
+   "peso": "peso",
+   "calculo": "Cómo se calcula el ranking",
+   "calculo_txt": "Toma la <b>estrella dorada como referencia 1</b>. Entonces:",
+   "explica": "O sea: ganar la liga vale <b>3</b> veces un torneo, y un 2v2 vale la mitad. Quien domina el circuito no es el que más torneos gana, sino el que suma de todo.",
+   "ranking": "Ranking",
+   "pos": "#",
+   "jugador": "Jugador",
+   "torneo": "Torneo",
+   "v2v2": "2v2",
+   "liga": "Liga",
+   "puntos": "Puntos",
+   "progreso": "Progreso",
+   "vacio": "Ranking vacío. Todavía no hay jugadores cargados. Cargalos con el formulario de abajo (quedan guardados en este navegador) o ponelos en <code>data/circuito.json</code>.",
+   "cargar": "Cargar jugadores",
+   "cargar_sub": "Escribí uno por línea: <code>nombre, torneo, 2v2, liga</code>. El botón de exportar baja el <code>circuito.json</code> listo para subirlo al sitio.",
+   "cargar_btn": "Cargar",
+   "exportar": "Exportar circuito.json",
+   "borrar": "Vaciar",
+   "premiacion": "Premiación",
+   "que_es": "Qué es",
+   "falta_premios": "Premios concretos, fechas y requisitos de inscripción: faltan. Escribilos acá y los saco a una tabla con los porcentajes de premio por puesto.",
+   "historia": "Historia del torneo",
+   "historia_sub": "Temporadas pasadas: quién ganó y con qué personajes. Cargar en <code>data/circuito.json</code>, lista <code>historia</code>.",
+   "sin_historia": "Todavía no hay temporadas cargadas.",
+   "temporada": "Temporada",
+   "ganador": "Ganador",
+   "personajes": "Personajes",
+   "notas": "Notas",
+   "intro": "El circuito de la comunidad. Hay tres trofeos y no valen lo mismo: la estrella dorada se lleva el campeón del torneo, la plateada el del 2 contra 2, y la liga es el reconocimiento más alto que hay. El ranking se arma con esos pesos, tomando la estrella dorada como referencia.",
+   "premio": "Premio",
+   "insignias": "Títulos",
+   "sin_titulos": "—",
+   "med_oro": "Medalla de oro",
+   "med_plata": "Medalla de plata",
+   "med_bronce": "Medalla de bronce"
+  },
+  "matchup": {
+   "titulo": "Matchup",
+   "sub": "Quién le gana a quién. Cada celda va del <b>1 al 10</b>: 5 es parejo y 10 es aplastante. La fila le gana a la columna.",
+   "leyenda": "Leyenda",
+   "gana": "gana",
+   "pierde": "pierde",
+   "empate": "empate",
+   "sin_dato": "sin dato",
+   "como": "Cómo se lee",
+   "como_txt": "Cada celda es una calificación del 1 al 10 de cómo le pega la fila contra la columna. Vienen calcular del perfil y los stats del ROM: no son partidas medidas. Escribís un número del 1 al 10 y queda fijado a mano. 5 es parejo, 10 es aplastante.",
+   "exportar": "Exportar matchup.json",
+   "borrar_todo": "Vaciar todo",
+   "diag": "Diagnóstico",
+   "diag_txt": "Promedio de las 10 calificaciones de cada personaje. Sirve para ver el orden de fuerza que da el cálculo automático, no partidas medidas.",
+   "sets": "sets ganados",
+   "perdidos": "sets perdidos",
+   "mfuerte": "muy fuerte",
+   "fuerte": "fuerte",
+   "afavor": "a favor",
+   "parejo": "parejo",
+   "encontra": "en contra",
+   "debil": "débil",
+   "mdebil": "muy débil",
+   "bucket": {
+    "mfuerte": "muy fuerte",
+    "fuerte": "fuerte",
+    "afavor": "a favor",
+    "parejo": "parejo",
+    "encontra": "en contra",
+    "debil": "débil",
+    "mdebil": "muy débil"
+   },
+   "recalcular": "Volver al automático",
+   "editados": "editadas a mano",
+   "auto_nota": "lo que no edites se calcula del perfil y los stats del ROM",
+   "diag_media": "Media",
+   "diag_edit": "Editadas",
+   "diag_fortaleza": "Fortaleza",
+   "jugador": "Luchador"
+  },
+  "descargas": {
+   "titulo": "Descargas",
+   "sin_archivo": "sin archivo",
+   "descargar": "Descargar",
+   "nota_rom": "Sobre el ROM: el juego es software con derechos de autor y no se descarga desde acá. Para jugar necesitás el original o una copia legal tuya. Lo que sí va son las herramientas.",
+   "intro": "Herramientas propias para jugar y para estudiar el juego. Todas están en el repositorio del proyecto y se pueden usar con Fightcade + FBNeo."
+  },
+  "datos": {
+   "titulo": "De dónde salen los datos",
+   "sub": "Toda esta web sale de una cosa: desensamblar el 68000 del juego y leer sus tablas. No hay frame data publicada en internet para este juego, así que lo que hay aquí es propio.",
+   "movimientos": "Movimientos",
+   "con_dano": "Con daño",
+   "contextos": "Contextos",
+   "vida": "Vida máxima",
+   "d1": "leídos de la tabla de animación de cada contexto",
+   "d2": "los que aparecen en las tablas de la web",
+   "d3": "uno por personaje, leídos de las rutinas de inicio",
+   "d4": "y 223 de maná, que es de donde venía el error clásico",
+   "etiquetas": "Las tres etiquetas",
+   "e1": "Leído del código del cartucho. Es la única fuente que manda.",
+   "e2": "Mirado corriendo el juego en el emulador.",
+   "e3": "Viene de una guía externa. Se usa como pista, nunca como verdad.",
+   "errores": "Errores que ya cometimos y no repetimos",
+   "x1": "<b>La vida máxima no es 223.</b> Es 255. El 223 es el tope del maná y se leyó el campo equivocado. Aparecía en casi todas las guías del juego.",
+   "x2": "<b>El \"daño\" de algunos especiales era maná.</b> Se midió el recurso que se gasta en vez del daño que se inflige.",
+   "x3": "<b>No hay tabla de frames publicada.</b> Cualquier sitio que diga \"startup 7\" para este juego está inventando.",
+   "x4": "<b>Kurama es Itsuki, y Chui es Yusuke.</b> En el ROM comparten tabla de movimientos: son cuatro entradas en la pantalla y dos luchadores.",
+   "falta": "Lo que falta por investigar",
+   "f1": "El blockstun: se sabe el valor (32) pero no la dirección en la memoria.",
+   "f2": "El significado del campo de agarre, que decide quién puede agarrar a quién.",
+   "f3": "Los combos reales: los que hay son propuestas, falta medirlos jugando.",
+   "f4": "La paleta correcta del juego, que sigue sin capturar.",
+   "fuente_es": "fuente: ES"
+  },
+  "chip": {
+   "rom": "ROM",
+   "med": "medido",
+   "web": "web"
+  },
+  "no_encontrado": "No encontrado",
+  "pie": {
+   "linea": "guía hecha a mano sobre el ROM y el emulador.",
+   "origenes": "Cada dato lleva su origen: verificado en el código, sin verificar, o"
+  }
+ },
+ "en": {
+  "idioma": "English",
+  "sigla": "EN",
+  "nav": {
+   "inicio": "Home",
+   "personajes": "Fighters",
+   "guias": "Guides",
+   "circuito": "Circuit",
+   "descargas": "Downloads",
+   "matchup": "Matchup"
+  },
+  "volver": "← all fighters",
+  "portada": {
+   "titulo": "The guide made by people who took it apart",
+   "bajada": "Frame data taken from the ROM itself, not from any guide. Everything here is verified against the game's code, or marked <span class=\"chip chip-web\">web</span> when it comes from outside.",
+   "primero": "The first thing to know",
+   "los_once": "The eleven"
+  },
+  "tiras": {
+   "luchadores": {
+    "t": "Fighters",
+    "d": "sheets, specials, frame data and a learning tree"
+   },
+   "guias": {
+    "t": "Guides",
+    "d": "system, controls, secrets and training"
+   },
+   "circuito": {
+    "t": "Circuit",
+    "d": "argentine tournament, league and 2v2"
+   },
+   "matchup": {
+    "t": "Matchup",
+    "d": "who beats who, written by hand"
+   },
+   "datos": {
+    "t": "Moves",
+    "d": "read from the ROM, with startup, active and recovery"
+   }
+  },
+  "datos_clave": [
+   [
+    "Max health",
+    "255 points. Not 223: that number is the mana cap and was the most repeated mistake in every guide of this game."
+   ],
+   [
+    "Mana (TA)",
+    "223 maximum. Used to pay for specials and the super."
+   ],
+   [
+    "Low health threshold",
+    "111. Below it the fighter enters the weak state."
+   ],
+   [
+    "Buttons",
+    "<b>B</b> weak hit · <b>A</b> strong hit · <b>C</b> guard. On a 6-button pad: <b>X</b> backstep, <b>Y</b> line change, <b>Z</b> dash."
+   ],
+   [
+    "Super",
+    "unlocked at half health or less <b>and</b> full mana."
+   ],
+   [
+    "Secret",
+    "in OPTIONS, <b>A + C + START</b> opens the debug mode."
+   ]
+  ],
+  "personajes": {
+   "titulo": "Fighters",
+   "sub": "Sorted by attack. The grades go from <b>S</b> to <b>E</b>: they are not numbers, they are the grading of the original sheets.",
+   "nota": "Note: in the ROM, <b>Kurama and Itsuki</b> share the same move table, and so do <b>Chui and Yusuke</b>. They are four entries on the select screen but only two fighters.",
+   "ordenar": "Sorted by:"
+  },
+  "ficha": {
+   "pos": "Slot",
+   "en_pantalla": "on the select screen",
+   "numeros": "Numbers",
+   "contexto": "Context in the ROM:",
+   "golpes_normales": "Normal attacks",
+   "nota_fuentes": "names and commands from the sheet; damage was cross-checked against the ROM table.",
+   "especiales": "Specials",
+   "super": "Super",
+   "comando_super": "Super command:",
+   "video": "Video",
+   "falta_video": "Video missing. Paste a YouTube link in <code>data/extras.json</code>, field <code>video</code> for this fighter. This frame shows until it loads.",
+   "lore": "Lore",
+   "falta_lore": "Lore text missing. Write it in <code>data/extras.json</code>, field <code>lore</code>. Meanwhile, what is verified is this: their role in the game is",
+   "arbol": "Learning tree",
+   "arbol_sub": "Ordered so you do not burn all your mana before round two. The tiers come from each move's mana cost.",
+   "nivel1": "Tier 1 — The basics",
+   "nivel1_txt": "Learn to chain cancellable hits and to space yourself.",
+   "nivel2": "Tier 2 — Cheap specials",
+   "nivel3": "Tier 3 — Expensive specials",
+   "nivel3_txt": "With these you are really spending mana: decide what you are saving for the super.",
+   "nivel4": "Tier 4 — The super",
+   "nivel4_txt": "Needs half health or less <b>and</b> full mana.",
+   "combos": "Combos",
+   "combos_sub": "You add the verified ones: write them below and they stay in this browser. The ones shown by default are proposals generated from cancellable hits, so they may not work as written.",
+   "tus_combos": "Your combos",
+   "vacio_combos": "Nothing loaded yet.",
+   "notacion": "notation, e.g. 2A > ↓↘+B > ↓↓+A",
+   "nota_op": "note (optional)",
+   "anadir": "Add",
+   "vaciar": "Clear",
+   "proponer": "proposal",
+   "propuestas": "Proposals to test",
+   "propuestas_sub": "generated from cancellable hits and the most expensive specials.",
+   "frases": "What they say",
+   "framedata": "Frame data from the ROM",
+   "framedata_sub": "Read from each character's animation table. <b>Active</b> is the frames that deal damage; <b>recovery</b> is what comes after the last one. Only moves that deal damage are listed.",
+   "filtrar_id": "filter by id (e.g. A0)",
+   "dmg_min": "minimum damage",
+   "ord_dmg": "sort by damage",
+   "ord_startup": "sort by startup",
+   "ord_stun": "sort by stun",
+   "ord_id": "sort by id",
+   "col_move": "Move",
+   "col_tipo": "Type",
+   "col_inicio": "Startup",
+   "col_activo": "Active",
+   "col_recup": "Recov.",
+   "col_total": "Total",
+   "col_dmg": "Damage",
+   "col_stun": "Stun",
+   "mantener": "hold",
+   "golpes": "hits",
+   "especial": "special",
+   "normal": "normal",
+   "de_dano": "damage",
+   "col_altura": "Height",
+   "col_efecto": "Effect",
+   "col_cancel": "Cancellable",
+   "col_tecnica": "Technique",
+   "col_comando": "Command",
+   "regen": "Regeneration",
+   "vida_hp": "Health / HP",
+   "mana": "Mana"
+  },
+  "notas": {
+   "Ataque": "Attack",
+   "Defensa": "Defense",
+   "Velocidad": "Speed",
+   "Salto": "Jump",
+   "Global": "Overall",
+   "ATQ": "ATK",
+   "DEF": "DEF",
+   "VEL": "SPD",
+   "STUN": "STUN"
+  },
+  "guias": [
+   {
+    "t": "The combat system",
+    "c": "rom",
+    "d": "The bare minimum",
+    "h": [
+     [
+      "Health, mana and stun",
+      "<p>Health goes up to <b>255</b>. Mana up to <b>223</b>. Below <b>111 health</b> the fighter goes into the weak state: they blink and the warning plays.</p><p>Stun is what lets you combo: every hit removes stun frames from the opponent, and if you take more than the character has in reserve, everything stops for them.</p>"
+     ],
+     [
+      "Cancelling",
+      "<p>Cancelling is chaining a weak hit inside the strong one. That is where long combos come from. In each sheet, the <b>Cancellable</b> column tells you which hits allow it.</p><p>Some hits <b>cannot</b> be cancelled. There is no combo out of those.</p>"
+     ],
+     [
+      "Planes",
+      "<p>There are two depth planes and they cross: fighters can pass in front of and behind each other. That changes which hit connects.</p>"
+     ],
+     [
+      "Grabs",
+      "<p>A grab floats the opponent. The game decides whether two fighters can grab each other by comparing a field whose meaning is still not closed. That is why some matchups simply cannot grab.</p>"
+     ]
+    ]
+   },
+   {
+    "t": "Controls",
+    "c": "rom",
+    "d": "3-button and 6-button pads",
+    "h": [
+     [
+      "Buttons",
+      "<p><b>B</b> weak · <b>A</b> strong · <b>C</b> guard.</p><p>On a 6-button pad: <b>X</b> backstep, <b>Y</b> line change, <b>Z</b> dash. Dash is two taps of a direction, and there is forward and back dash.</p>"
+     ],
+     [
+      "Guarding",
+      "<p><b>C</b> is guarding, and the matching move has 64 stun: that 64 is block stun. It is the highest in the game after Jin's.</p>"
+     ],
+     [
+      "Super",
+      "<p>Unlocked at <b>half health or less</b> with <b>full mana</b>. Every fighter has it on a different command; they are in the sheets.</p>"
+     ]
+    ]
+   },
+   {
+    "t": "Training",
+    "c": "med",
+    "d": "Practising without wasting time",
+    "h": [
+     [
+      "The list",
+      "<ol><li>Single buttons: standing <b>B</b>, standing <b>A</b>, crouching <b>B</b>, crouching <b>A</b>.</li><li>Forward and back dash until it comes out by itself.</li><li>The three specials that cost the least mana.</li><li>One short combo with the cheapest special.</li><li>The super, at half health.</li></ol>"
+     ],
+     [
+      "Debug mode",
+      "<p>In OPTIONS hold <b>A + C + START</b>. It gives full and critical health to the players and turns on <i>hit-time</i> so you can see the impact frames.</p>"
+     ]
+    ]
+   },
+   {
+    "t": "Secrets",
+    "c": "rom",
+    "d": "What is hidden",
+    "h": [
+     [
+      "Handicap mode",
+      "<p>There is a hidden mode unlocked by clearing the debug mode.</p>"
+     ],
+     [
+      "Cameras",
+      "<p>The game only pans 240 of the 320 screen pixels, but the stage follows the camera and <b>repeats forever</b>: with an external tool you can move the camera anywhere and see stages you never see while playing normally.</p>"
+     ]
+    ]
+   },
+   {
+    "t": "Reading frame data",
+    "c": "rom",
+    "d": "What the columns mean",
+    "h": [
+     [
+      "Startup, active, recovery",
+      "<p><b>Startup</b> is the frames from pressing the button until the hit deals damage. <b>Active</b> is the frames it deals damage. <b>Recovery</b> is what comes after until you can act again.</p><p>A move with lots of startup and little active is safer and less rewarding. Most combos are startup versus the opponent's startup.</p>"
+     ],
+     [
+      "Why there are no tables online",
+      "<p>Because this game only came out in Japan in 1994 and there was no datamining scene. The only serious source is the ROM, and that is where the numbers on this site come from.</p>"
+     ]
+    ]
+   },
+   {
+    "t": "Playing better",
+    "c": "web",
+    "d": "Planes and spacing",
+    "h": [
+     [
+      "Corner pressure",
+      "<p>Characters cannot leave the stage. Pressing the opponent into a wall cuts off one of their escape routes.</p>"
+     ],
+     [
+      "Air",
+      "<p>Air hits do less damage and far less stun than grounded ones, but many specials only come out in the air.</p>"
+     ]
+    ]
+   }
+  ],
+  "circuito": {
+   "titulo": "Competitive circuit",
+   "podio": "Golden star",
+   "podio2": "Silver star",
+   "podio3": "League",
+   "p1d": "tournament champion",
+   "p2d": "2v2 champion",
+   "p3d": "the highest recognition there is",
+   "peso": "weight",
+   "calculo": "How the ranking is calculated",
+   "calculo_txt": "Take the <b>golden star as 1</b>. Then:",
+   "explica": "In other words: winning the league is worth <b>3</b> tournaments, and a 2v2 is worth half. Whoever dominates the circuit is not whoever wins the most tournaments, but whoever adds up.",
+   "ranking": "Ranking",
+   "pos": "#",
+   "jugador": "Player",
+   "torneo": "Tournament",
+   "v2v2": "2v2",
+   "liga": "League",
+   "puntos": "Points",
+   "progreso": "Progress",
+   "vacio": "Empty ranking. No players loaded yet. Load them with the form below (they stay in this browser) or put them in <code>data/circuito.json</code>.",
+   "cargar": "Load players",
+   "cargar_sub": "One per line: <code>name, tournament, 2v2, league</code>. The export button downloads a ready-to-upload <code>circuito.json</code>.",
+   "cargar_btn": "Load",
+   "exportar": "Export circuito.json",
+   "borrar": "Clear",
+   "premiacion": "Prizes",
+   "que_es": "What it is",
+   "falta_premios": "Concrete prizes, dates and sign-up requirements: missing. Write them here and I will turn it into a table with prize percentages per place.",
+   "historia": "Tournament history",
+   "historia_sub": "Past seasons: who won and with which characters. Load in <code>data/circuito.json</code>, <code>history</code> list.",
+   "sin_historia": "No seasons loaded yet.",
+   "temporada": "Season",
+   "ganador": "Winner",
+   "personajes": "Characters",
+   "notas": "Notes",
+   "intro": "The community circuit. There are three trophies and they are not worth the same: the gold star goes to the tournament champion, the silver one to the 2-on-2 champion, and the league is the highest recognition there is. The ranking is built with those weights, taking the gold star as the reference.",
+   "premio": "Prize",
+   "insignias": "Titles",
+   "sin_titulos": "—",
+   "med_oro": "Gold medal",
+   "med_plata": "Silver medal",
+   "med_bronce": "Bronze medal"
+  },
+  "matchup": {
+   "titulo": "Matchup",
+   "sub": "Who beats who. Each cell goes from <b>1 to 10</b>: 5 is even and 10 is crushing. The row beats the column.",
+   "leyenda": "Legend",
+   "gana": "wins",
+   "pierde": "loses",
+   "empate": "draw",
+   "sin_dato": "no data",
+   "como": "How to read it",
+   "como_txt": "Each cell is a 1 to 10 rating of how hard the row beats the column. They come from the profile and the ROM stats: not from measured matches. Type a number from 1 to 10 to pin it by hand. 5 is even, 10 is crushing.",
+   "exportar": "Export matchup.json",
+   "borrar_todo": "Clear all",
+   "diag": "Diagnosis",
+   "diag_txt": "Average of each fighter's 10 ratings. It shows the strength order the automatic calculation gives, not measured matches.",
+   "sets": "sets won",
+   "perdidos": "sets lost",
+   "mfuerte": "very strong",
+   "fuerte": "strong",
+   "afavor": "favoured",
+   "parejo": "even",
+   "encontra": "disfavoured",
+   "debil": "weak",
+   "mdebil": "very weak",
+   "bucket": {
+    "mfuerte": "very strong",
+    "fuerte": "strong",
+    "afavor": "favoured",
+    "parejo": "even",
+    "encontra": "disfavoured",
+    "debil": "weak",
+    "mdebil": "very weak"
+   },
+   "recalcular": "Back to automatic",
+   "editados": "edited by hand",
+   "auto_nota": "anything you do not edit is computed from the profile and the ROM stats",
+   "diag_media": "Average",
+   "diag_edit": "Edited",
+   "diag_fortaleza": "Strength",
+   "jugador": "Fighter"
+  },
+  "descargas": {
+   "titulo": "Downloads",
+   "sin_archivo": "no file",
+   "descargar": "Download",
+   "nota_rom": "About the ROM: the game is copyrighted and is not downloaded from here. To play you need the original or your own legal copy. The tools are what we do ship.",
+   "intro": "Our own tools, both for playing and for studying the game. They all live in the project repository and work with Fightcade + FBNeo."
+  },
+  "datos": {
+   "titulo": "Where the data comes from",
+   "sub": "This whole site comes from one thing: disassembling the game's 68000 and reading its tables. There is no frame data published anywhere for this game, so what is here is ours.",
+   "movimientos": "Moves",
+   "con_dano": "With damage",
+   "contextos": "Contexts",
+   "vida": "Max health",
+   "d1": "read from the animation table of each context",
+   "d2": "the ones that show up in the site tables",
+   "d3": "one per fighter, read from the init routines",
+   "d4": "and 223 of mana, which is where the classic mistake came from",
+   "etiquetas": "The three labels",
+   "e1": "Read from the cartridge code. It is the only source that rules.",
+   "e2": "Watched while running the game in the emulator.",
+   "e3": "Comes from an outside guide. Used as a hint, never as truth.",
+   "errores": "Mistakes we already made and will not repeat",
+   "x1": "<b>Max health is not 223.</b> It is 255. The 223 is the mana cap and we read the wrong field. It was in almost every guide of this game.",
+   "x2": "<b>The \"damage\" of some specials was mana.</b> We measured the resource you spend instead of the damage you deal.",
+   "x3": "<b>There is no published frame table.</b> Any site claiming \"7 frame startup\" for this game is making it up.",
+   "x4": "<b>Kurama is Itsuki, and Chui is Yusuke.</b> In the ROM they share a move table: four entries on the screen, two fighters.",
+   "falta": "Still to investigate",
+   "f1": "Block stun: the value is known (32) but not the address in memory.",
+   "f2": "The meaning of the grab field, which decides who can grab whom.",
+   "f3": "Real combos: what is there are proposals, they need to be measured by playing.",
+   "f4": "The correct palette of the game, still uncaptured.",
+   "fuente_es": "source: ES"
+  },
+  "chip": {
+   "rom": "ROM",
+   "med": "measured",
+   "web": "web"
+  },
+  "no_encontrado": "Not found",
+  "pie": {
+   "linea": "a guide written by hand from the ROM and the emulator.",
+   "origenes": "Every figure says where it comes from: verified in the code, unverified, or"
+  }
+ },
+ "zh": {
+  "idioma": "中文",
+  "sigla": "ZH",
+  "nav": {
+   "inicio": "首页",
+   "personajes": "格斗家",
+   "guias": "指南",
+   "circuito": "赛事",
+   "descargas": "下载",
+   "matchup": "相性"
+  },
+  "volver": "← 全部格斗家",
+  "portada": {
+   "titulo": "由把它拆开的人写的指南",
+   "bajada": "帧数据直接从 ROM 读出，不是抄来的。这里的一切都在游戏代码里核对过；来自外部的会标上 <span class=\"chip chip-web\">web</span>。",
+   "primero": "首先要知道的事",
+   "los_once": "十一人"
+  },
+  "tiras": {
+   "luchadores": {
+    "t": "格斗家",
+    "d": "人物档案、必杀技、帧数据与成长路线"
+   },
+   "guias": {
+    "t": "指南",
+    "d": "系统、按键、秘技与训练"
+   },
+   "circuito": {
+    "t": "赛事",
+    "d": "阿根廷锦标赛、联赛与 2 对 2"
+   },
+   "matchup": {
+    "t": "相性",
+    "d": "谁克谁，手工记录"
+   },
+   "datos": {
+    "t": "招式",
+    "d": "读自 ROM，含启动、持续与收招"
+   }
+  },
+  "datos_clave": [
+   [
+    "体力上限",
+    "255 点。不是 223：223 是灵力上限，也是所有攻略里最常见的错误。"
+   ],
+   [
+    "灵力（TA）",
+    "最高 223。用来支付必杀技和超必杀。"
+   ],
+   [
+    "低体力线",
+    "111。低于此值角色进入虚弱状态。"
+   ],
+   [
+    "按键",
+    "<b>B</b> 弱攻击 · <b>A</b> 强攻击 · <b>C</b> 防御。六键手柄：<b>X</b> 后跳步，<b>Y</b> 换层，<b>Z</b> 冲刺。"
+   ],
+   [
+    "超必杀",
+    "体力一半以下<b>且</b>灵力满时可用。"
+   ],
+   [
+    "秘技",
+    "在 OPTIONS 按住 <b>A + C + START</b> 进入调试模式。"
+   ]
+  ],
+  "personajes": {
+   "titulo": "格斗家",
+   "sub": "按攻击力排序。评价从 <b>S</b> 到 <b>E</b>：不是数字，是原始档案的评级。",
+   "nota": "注意：在 ROM 里，<b>藏马与一几率相同</b>，<b> chui 与幽助也相同</b>（招式表一致）。选择画面上有四个位置，但实际只有两个格斗家。",
+   "ordenar": "排序："
+  },
+  "ficha": {
+   "pos": "位置",
+   "en_pantalla": "在选择画面上",
+   "numeros": "数值",
+   "contexto": "ROM 里的上下文：",
+   "golpes_normales": "普通攻击",
+   "nota_fuentes": "名称与指令来自档案；伤害已与 ROM 表格核对。",
+   "especiales": "必杀技",
+   "super": "超必杀",
+   "comando_super": "超必杀指令：",
+   "video": "视频",
+   "falta_video": "还缺视频。把 YouTube 链接填到 <code>data/extras.json</code> 的 <code>video</code> 字段。在此之前显示这个框。",
+   "lore": "背景",
+   "falta_lore": "还缺背景文字。写在 <code>data/extras.json</code> 的 <code>lore</code> 字段。目前已确认的是：他在游戏中的定位是",
+   "arbol": "成长路线",
+   "arbol_sub": "按灵力消耗排的顺序，目的是第二轮前不把灵力打空。等级由各招式的灵力消耗得出。",
+   "nivel1": "第 1 级 —— 基本功",
+   "nivel1_txt": "先学会连打可取消的招式，以及控制距离。",
+   "nivel2": "第 2 级 —— 便宜必杀",
+   "nivel3": "第 3 级 —— 昂贵必杀",
+   "nivel3_txt": "到这一步是真的在烧灵力了：想清楚要为超必杀留多少。",
+   "nivel4": "第 4 级 —— 超必杀",
+   "nivel4_txt": "需要体力一半以下<b>且</b>灵力全满。",
+   "combos": "连段",
+   "combos_sub": "已验证的连段由你自己填：写在这里会存在本浏览器里。默认显示的是根据可取消招式生成的建议，不一定成立。",
+   "tus_combos": "你的连段",
+   "vacio_combos": "还没有内容。",
+   "notacion": "写法，例如 2A > ↓↘+B > ↓↓+A",
+   "nota_op": "备注（可选）",
+   "anadir": "添加",
+   "vaciar": "清空",
+   "proponer": "建议",
+   "propuestas": "待验证建议",
+   "propuestas_sub": "根据可取消招式与最贵的必杀自动生成。",
+   "frases": "台词",
+   "framedata": "ROM 帧数据",
+   "framedata_sub": "读自各角色的动画表。<b>持续</b>是有伤害的帧，<b>收招</b>是最后一次伤害之后的帧。这里只列有伤害的招式。",
+   "filtrar_id": "按 id 过滤（例如 A0）",
+   "dmg_min": "最低伤害",
+   "ord_dmg": "按伤害排序",
+   "ord_startup": "按启动排序",
+   "ord_stun": "按硬直排序",
+   "ord_id": "按 id 排序",
+   "col_move": "招式",
+   "col_tipo": "类型",
+   "col_inicio": "启动",
+   "col_activo": "持续",
+   "col_recup": "收招",
+   "col_total": "总计",
+   "col_dmg": "伤害",
+   "col_stun": "硬直",
+   "mantener": "蓄力",
+   "golpes": "段",
+   "especial": "必杀",
+   "normal": "普通",
+   "de_dano": "伤害",
+   "col_altura": "高度",
+   "col_efecto": "效果",
+   "col_cancel": "可取消",
+   "col_tecnica": "招式",
+   "col_comando": "指令",
+   "regen": "回复",
+   "vida_hp": "体力 / HP",
+   "mana": "灵力"
+  },
+  "notas": {
+   "Ataque": "攻击",
+   "Defensa": "防御",
+   "Velocidad": "速度",
+   "Salto": "跳跃",
+   "Global": "综合",
+   "ATQ": "攻",
+   "DEF": "防",
+   "VEL": "速",
+   "STUN": "硬直"
+  },
+  "guias": [
+   {
+    "t": "战斗系统",
+    "c": "rom",
+    "d": "最少要知道的事",
+    "h": [
+     [
+      "体力、灵力与硬直",
+      "<p>体力最高 <b>255</b>，灵力最高 <b>223</b>。体力低于 <b>111</b> 时角色进入虚弱状态：闪烁并播放警告音。</p><p>硬直才是连段的基础：每一击都会削掉对手的硬直帧，如果削得超过他这个角色的储备，他就什么都做不了。</p>"
+     ],
+     [
+      "取消",
+      "<p>取消就是在强攻击的动作里接一记弱攻击，长连段就是这么来的。每份档案里的<b>可取消</b>一列告诉你哪些招式可以。</p><p>有些招式<b>不能</b>取消，那就没法连。</p>"
+     ],
+     [
+      "前后层",
+      "<p>有两个深度层，而且可以穿过去：角色能互相从身前和身后经过，这会改变哪一下能打中。</p>"
+     ],
+     [
+      "抓取",
+      "<p>抓取会把对手浮起来。游戏靠比较一个字段来决定两个人能不能互相抓，而这个字段的含义目前还没完全弄清。所以有些组合就是抓不到。</p>"
+     ]
+    ]
+   },
+   {
+    "t": "按键",
+    "c": "rom",
+    "d": "三键与六键手柄",
+    "h": [
+     [
+      "按键",
+      "<p><b>B</b> 弱 · <b>A</b> 强 · <b>C</b> 防御。</p><p>六键手柄：<b>X</b> 后跳步，<b>Y</b> 换层，<b>Z</b> 冲刺。冲刺是方向键两下，有前冲和后冲。</p>"
+     ],
+     [
+      "防御",
+      "<p><b>C</b> 是防御，对应的招式有 64 点硬直：这个 64 就是防御硬直，是全游戏第二高的（仅次于阵）。</p>"
+     ],
+     [
+      "超必杀",
+      "<p><b>体力一半以下</b>加<b>灵力全满</b>才能用。每个角色的指令都不同，写在各档案里。</p>"
+     ]
+    ]
+   },
+   {
+    "t": "训练",
+    "c": "med",
+    "d": "别浪费时间地练",
+    "h": [
+     [
+      "清单",
+      "<ol><li>单键：站 <b>B</b>、站 <b>A</b>、蹲 <b>B</b>、蹲 <b>A</b>。</li><li>前冲和后冲，练到不用想。</li><li>三个最省灵力的必杀。</li><li>用最便宜的必杀打一个短连段。</li><li>半血时的超必杀。</li></ol>"
+     ],
+     [
+      "调试模式",
+      "<p>在 OPTIONS 按住 <b>A + C + START</b>。会给出满血与濒死血量，并打开 <i>hit-time</i> 以便看到命中帧。</p>"
+     ]
+    ]
+   },
+   {
+    "t": "秘技",
+    "c": "rom",
+    "d": "藏起来的东西",
+    "h": [
+     [
+      "平衡模式（Handicap）",
+      "<p>有一个隐藏模式，通关调试模式后解锁。</p>"
+     ],
+     [
+      "镜头",
+      "<p>游戏只横扫 320 像素画面中的 240 像素，但场景跟着镜头走而且<b>无限重复</b>：用外部工具可以把镜头移到任何地方，看到正常游玩永远看不到的场景。</p>"
+     ]
+    ]
+   },
+   {
+    "t": "怎么读帧数据",
+    "c": "rom",
+    "d": "每一列是什么意思",
+    "h": [
+     [
+      "启动、持续、收招",
+      "<p><b>启动</b>是从按下按键到这一击开始造成伤害之间的帧；<b>持续</b>是造成伤害的帧；<b>收招</b>是最后一次伤害之后到能再次操作之间的帧。</p><p>启动长、持续短的招式更安全但收益低。大多数连段就是用启动对启动。</p>"
+     ],
+     [
+      "为什么网上没有表",
+      "<p>因为这游戏 1994 年只在日本发售，当时没有刷数据的风气。唯一靠得住的来源就是 ROM，本站的数字都是从那里来的。</p>"
+     ]
+    ]
+   },
+   {
+    "t": "打得更好",
+    "c": "web",
+    "d": "前后层与距离",
+    "h": [
+     [
+      "压到墙角",
+      "<p>角色不能走出场景。把对手逼到墙边会封掉他一半的脱身方向。</p>"
+     ],
+     [
+      "空中",
+      "<p>空中攻击的伤害和硬直都远低于地面攻击，但很多必杀只能在空中出。</p>"
+     ]
+    ]
+   }
+  ],
+  "circuito": {
+   "titulo": "竞技赛事",
+   "podio": "金星",
+   "podio2": "银星",
+   "podio3": "联赛",
+   "p1d": "锦标赛冠军",
+   "p2d": "2 对 2 冠军",
+   "p3d": "最高荣誉",
+   "peso": "权重",
+   "calculo": "排名怎么算",
+   "calculo_txt": "以<b>金星为 1</b>作基准。于是：",
+   "explica": "也就是说：赢一次联赛等于 <b>3</b> 个锦标赛，2 对 2 算半个。统治赛区的人不是赢得锦标赛最多的人，而是把三项加起来的人。",
+   "ranking": "排名",
+   "pos": "#",
+   "jugador": "选手",
+   "torneo": "锦标赛",
+   "v2v2": "2 对 2",
+   "liga": "联赛",
+   "puntos": "积分",
+   "progreso": "进度",
+   "vacio": "排名是空的。还没有选手。用下面的表单载入（会存在本浏览器），或写进 <code>data/circuito.json</code>。",
+   "cargar": "载入选手",
+   "cargar_sub": "每行一个：<code>名字, 锦标赛, 2对2, 联赛</code>。导出按钮会下载可直接上传的 <code>circuito.json</code>。",
+   "cargar_btn": "载入",
+   "exportar": "导出 circuito.json",
+   "borrar": "清空",
+   "premiacion": "奖励",
+   "que_es": "是什么",
+   "falta_premios": "具体奖品、日期与报名要求：还缺。写在这里，我会做成按名次分配百分比奖励的表格。",
+   "historia": "锦标赛历史",
+   "historia_sub": "往届赛季：谁赢了、用什么角色。在 <code>data/circuito.json</code> 的 <code>history</code> 里载入。",
+   "sin_historia": "还没有载入任何赛季。",
+   "temporada": "赛季",
+   "ganador": "冠军",
+   "personajes": "角色",
+   "notas": "备注",
+   "intro": "社区的联赛赛。一共三个奖杯，价值并不相同：金星给单挑赛冠军，银星给2对2冠军，联赛则是最高的荣誉。排名就是按这些权重算的，以金星为基准。",
+   "premio": "奖品",
+   "insignias": "头衔",
+   "sin_titulos": "—",
+   "med_oro": "金牌",
+   "med_plata": "银牌",
+   "med_bronce": "铜牌"
+  },
+  "matchup": {
+   "titulo": "相性",
+   "sub": "谁克谁。每格从 <b>1 到 10</b>：5 是势均力敌，10 是碾压。行克列。",
+   "leyenda": "图例",
+   "gana": "胜",
+   "pierde": "负",
+   "empate": "平",
+   "sin_dato": "无数据",
+   "como": "怎么看",
+   "como_txt": "每格是从 1 到 10 的评分，表示行对列有多强。它们来自档案和 ROM 数据，不是实测对战。填入 1 到 10 的数字就会固定下来。5 是势均力敌，10 是碾压。",
+   "exportar": "导出 matchup.json",
+   "borrar_todo": "全部清空",
+   "diag": "诊断",
+   "diag_txt": "每位角色 10 个评分的平均值。显示的是自动计算出的强度顺序，不是实测对战。",
+   "sets": "胜局",
+   "perdidos": "负局",
+   "mfuerte": "很强",
+   "fuerte": "强",
+   "afavor": "占优",
+   "parejo": "势均力敌",
+   "encontra": "吃亏",
+   "debil": "弱",
+   "mdebil": "很弱",
+   "bucket": {
+    "mfuerte": "很强",
+    "fuerte": "强",
+    "afavor": "占优",
+    "parejo": "势均力敌",
+    "encontra": "吃亏",
+    "debil": "弱",
+    "mdebil": "很弱"
+   },
+   "recalcular": "恢复自动",
+   "editados": "手动修改",
+   "auto_nota": "没改过的格子是按档案和 ROM 数据算的",
+   "diag_media": "平均",
+   "diag_edit": "已修改",
+   "diag_fortaleza": "强度",
+   "jugador": "角色"
+  },
+  "descargas": {
+   "titulo": "下载",
+   "sin_archivo": "无文件",
+   "descargar": "下载",
+   "nota_rom": "关于 ROM：游戏受版权保护，不从这里下载。要玩请自备正版或合法备份。这里只提供工具。",
+   "intro": "本站自己做的工具，既能用来玩，也能用来研究游戏。全部在项目仓库里，配合 Fightcade + FBNeo 使用。"
+  },
+  "datos": {
+   "titulo": "数据来源",
+   "sub": "整站只来自一件事：反汇编游戏的 68000 并读它的表。这个游戏在网上没有任何公开帧数据，所以这里的东西都是我们自己的。",
+   "movimientos": "招式",
+   "con_dano": "有伤害",
+   "contextos": "上下文",
+   "vida": "体力上限",
+   "d1": "读自每个上下文的动画表",
+   "d2": "出现在本站表格里的那些",
+   "d3": "每个角色一个，读自初始化例程",
+   "d4": "以及 223 灵力，经典错误就出在这里",
+   "etiquetas": "三种标记",
+   "e1": "从卡带代码里读出来的。只有它说了算。",
+   "e2": "在模拟器里跑着看的。",
+   "e3": "来自外部攻略。只当线索，不当事实。",
+   "errores": "已经犯过、不会再犯的错误",
+   "x1": "<b>体力上限不是 223。</b>是 255。223 是灵力上限，我们当初读错了字段，几乎所有攻略都写错了。</b>",
+   "x2": "<b>某些必杀的“伤害”其实是灵力。</b>我们量的是消耗的资源，不是造成的伤害。</p>",
+   "x3": "<b>没有公开的帧表。</b>任何说本作“启动 7 帧”的网站都是在编。</b>",
+   "x4": "<b>藏马就是一几率，chui 就是幽助。</b>在 ROM 里他们共用招式表：画面上四个位置，实际两个角色。</b>",
+   "falta": "还没查清的",
+   "f1": "防御硬直：数值已知（32），但内存地址还没找到。",
+   "f2": "抓取字段的含义，它决定谁抓得到谁。",
+   "f3": "真实连段：现在的都是建议，需要靠打来验证。",
+   "f4": "游戏正确的调色板，至今没抓到。",
+   "fuente_es": "来源：西语"
+  },
+  "chip": {
+   "rom": "ROM",
+   "med": "实测",
+   "web": "网络"
+  },
+  "no_encontrado": "没找到",
+  "pie": {
+   "linea": "这份指南是根据 ROM 和模拟器手写的。",
+   "origenes": "每个数据都标出来源：代码验证、未验证，或"
+  }
+ },
+ "ja": {
+  "idioma": "日本語",
+  "sigla": "JA",
+  "nav": {
+   "inicio": "ホーム",
+   "personajes": "ファイター",
+   "guias": "ガイド",
+   "circuito": "大会",
+   "descargas": "ダウンロード",
+   "matchup": "相性"
+  },
+  "volver": "← ファイター一覧",
+  "portada": {
+   "titulo": "分解して作ったガイド",
+   "bajada": "フレームデータはゲーム本から直接読み取ったもの。外部の情報は <span class=\"chip chip-web\">web</span> と明記しています。",
+   "primero": "まず押さえておきたいこと",
+   "los_once": "11人"
+  },
+  "tiras": {
+   "luchadores": {
+    "t": "ファイター",
+    "d": "個別データ、必殺技、フレームデータ、育成ツリー"
+   },
+   "guias": {
+    "t": "ガイド",
+    "d": "システム、操作、隠し要素、練習方法"
+   },
+   "circuito": {
+    "t": "大会",
+    "d": "阿根廷トーナメント、リーグ、2対2"
+   },
+   "matchup": {
+    "t": "相性",
+    "d": "誰が誰に勝つかを手作業で記録"
+   },
+   "datos": {
+    "t": "技",
+    "d": "ROMから読み取った発生・有効・後隙"
+   }
+  },
+  "datos_clave": [
+   [
+    "体力上限",
+    "255点。223ではありません。223は霊力の上限で、あらゆる攻略の誤り。"
+   ],
+   [
+    "霊力（TA）",
+    "最大223。必殺技とスーパーの缴费に使う。"
+   ],
+   [
+    "体力低下ライン",
+    "111。これを下ると弱体化状態に入る。"
+   ],
+   [
+    "ボタン",
+    "<b>B</b>弱打撃 · <b>A</b>強打撃 · <b>C</b>防御。6ボタンは<b>X</b>バックステップ、<b>Y</b>レイヤー変更、<b>Z</b>ダッシュ。"
+   ],
+   [
+    "スーパー",
+    "体力が半分以下、<b>かつ</b>霊力が満タンで解禁。"
+   ],
+   [
+    "隠し要素",
+    "OPTIONSで<b>A + C + START</b>を押したままでデバッグモード。"
+   ]
+  ],
+  "personajes": {
+   "titulo": "ファイター",
+   "sub": "攻撃力で並び替え。評価は<b>S</b>〜<b>E</b>の段階で、数値ではなく元資料のグレードです。",
+   "nota": "注意：ROM上では<b>蔵馬と一几率</b>が同じ技表を持ち、<b> chuiと幽助</b>も同じです。選択画面の4枠に対し、実体は2人です。",
+   "ordenar": "並び替え："
+  },
+  "ficha": {
+   "pos": "枠",
+   "en_pantalla": "選択画面",
+   "numeros": "数値",
+   "contexto": "ROM 上のコンテキスト：",
+   "golpes_normales": "通常技",
+   "nota_fuentes": "技名とコマンドは資料から。ダメージはROMの表と突き合わせ済み。",
+   "especiales": "必殺技",
+   "super": "スーパー",
+   "comando_super": "スーパーのコマンド：",
+   "video": "動画",
+   "falta_video": "動画が未登録です。<code>data/extras.json</code>の<code>video</code>にYouTubeのリンクを貼り付けてください。",
+   "lore": "設定",
+   "falta_lore": "設定文が未登録です。<code>data/extras.json</code>の<code>lore</code>に書いてください。現在確認できるのは次の点です：ゲーム内での役割は",
+   "arbol": "育成ツリー",
+   "arbol_sub": "2ラウンド前に霊力を切り詰めない順番。各段階は技の霊力コストから算出しています。",
+   "nivel1": "段階1 — 基礎",
+   "nivel1_txt": "キャンセル可能な技のつなぎ方と距離の取り方を覚える。",
+   "nivel2": "段階2 — 安い必殺技",
+   "nivel3": "段階3 — 高い必殺技",
+   "nivel3_txt": "ここまで本当に霊力を使う場面です：スーパーに残す分を考えます。",
+   "nivel4": "段階4 — スーパー",
+   "nivel4_txt": "体力半分以下、<b>かつ</b>霊力満タンが必要。",
+   "combos": "コンボ",
+   "combos_sub": "検証済みのコンボは自分で入力してください。このブラウザーに保存されます。初期表示はキャンセル可能な技から自動生成した候補で、そのままだと動かないかもしれません。",
+   "tus_combos": "あなたのコンボ",
+   "vacio_combos": "まだ何もありません。",
+   "notacion": "書き方（例：2A > ↓↘+B > ↓↓+A）",
+   "nota_op": "メモ（任意）",
+   "anadir": "追加",
+   "vaciar": "消去",
+   "proponer": "候補",
+   "propuestas": "試すべき候補",
+   "propuestas_sub": "キャンセル可能な技と高コスト技から自動生成。",
+   "frases": "台词",
+   "framedata": "ROMのフレームデータ",
+   "framedata_sub": "各キャラクターのアニメーションテーブルから読み取り。<b>有効</b>はダメージが発生するフレーム、<b>後隙</b>は最後のダメージ 이후のフレーム。ダメージのある技だけを掲載。",
+   "filtrar_id": "idで絞り込み（例 A0）",
+   "dmg_min": "最小ダメージ",
+   "ord_dmg": "ダメージ順",
+   "ord_startup": "発生順",
+   "ord_stun": "スタン順",
+   "ord_id": "id順",
+   "col_move": "技",
+   "col_tipo": "種類",
+   "col_inicio": "発生",
+   "col_activo": "有効",
+   "col_recup": "後隙",
+   "col_total": "合計",
+   "col_dmg": "ダメージ",
+   "col_stun": "スタン",
+   "mantener": "溜め",
+   "golpes": "ヒット",
+   "especial": "必殺",
+   "normal": "通常",
+   "de_dano": "ダメージ",
+   "col_altura": "高さ",
+   "col_efecto": "効果",
+   "col_cancel": "キャンセル可",
+   "col_tecnica": "技",
+   "col_comando": "コマンド",
+   "regen": "回復",
+   "vida_hp": "体力 / HP",
+   "mana": "霊力"
+  },
+  "notas": {
+   "Ataque": "攻撃",
+   "Defensa": "防御",
+   "Velocidad": "速度",
+   "Salto": "ジャンプ",
+   "Global": "総合",
+   "ATQ": "攻",
+   "DEF": "防",
+   "VEL": "速",
+   "STUN": "スタン"
+  },
+  "guias": [
+   {
+    "t": "戦闘システム",
+    "c": "rom",
+    "d": "最低限ここ",
+    "h": [
+     [
+      "体力・霊力・スタン",
+      "<p>体力は最大<b>255</b>、霊力は最大<b>223</b>。体力が<b>111</b>を下ると弱体化に入り、点滅して警告が鳴ります。</p><p>コンボはスタンを削って作ります。相手のキャラクターの予備スタンを超えて削れば、向こうは何もできません。</p>"
+     ],
+     [
+      "キャンセル",
+      "<p>強技のモーション中に弱技を繋ぐのがキャンセルです。長いコンボはここから生まれます。各データの「キャンセル可能」列が目安です。</p><p>キャンセルできない技もあります。そこからはコンボになりません。</p>"
+     ],
+     [
+      "レイヤー",
+      "<p>二層の奥行きがあり、互いにくぐり抜けられます。キャラ同士の前や後ろを回れるので、当たる技が変わります。</p>"
+     ],
+     [
+      "投げ",
+      "<p>投げると、対手は浮きます。二人で投げ合えるかどうかは未だ完全には分かっていないフィールドの比較で決まる。そのため投げられない組合があります。</p>"
+     ]
+    ]
+   },
+   {
+    "t": "操作",
+    "c": "rom",
+    "d": "3ボタンと6ボタン",
+    "h": [
+     [
+      "ボタン",
+      "<p><b>B</b>弱 · <b>A</b>強 · <b>C</b>防御。</p><p>6ボタン：<b>X</b>バックステップ、<b>Y</b>レイヤー変更、<b>Z</b>ダッシュ。ダッシュは方向を2タップで、前後どちらもあります。</p>"
+     ],
+     [
+      "防御",
+      "<p><b>C</b>は防御で、対応する技のスタンは64。つまり64はガードスタンで、ゲーム内2番目に高い値です（院の次）。</p>"
+     ],
+     [
+      "スーパー",
+      "<p><b>体力半分以下</b>かつ<b>霊力満タン</b>で解禁。キャラごとにコマンドが違うので、データを見てください。</p>"
+     ]
+    ]
+   },
+   {
+    "t": "練習",
+    "c": "med",
+    "d": "時間を無駄にしない練習",
+    "h": [
+     [
+      "リスト",
+      "<ol><li>単発：立ちB、立ちA、しゃがみB、しゃがみA。</li><li>前後のダッシュを、指が動く前に。</li><li>霊力が最も安い必殺技3つ。</li><li>一番安い必殺技で短いコンボを1つ。</li><li>体力半分のときのスーパー。</li></ol>"
+     ],
+     [
+      "デバッグモード",
+      "<p>OPTIONSで<b>A + C + START</b>を押したまま。体力全快・瀕死が付き、<i>ヒットタイム</i>が表示されてヒットフレームが見えます。</p>"
+     ]
+    ]
+   },
+   {
+    "t": "隠し要素",
+    "c": "rom",
+    "d": "隠されているもの",
+    "h": [
+     [
+      "ハンディキャップモード",
+      "<p>デバッグモードをクリアすると解禁される隠しモードがあります。</p>"
+     ],
+     [
+      "カメラ",
+      "<p>画面320pxのうちカメラが動くのは240pxだけですが、ステージはカメラについて来て<b>無限に繰り返します</b>。外部ツールでカメラをどこへでも動かせば、通常プレイでは見ないステージが見られます。</p>"
+     ]
+    ]
+   },
+   {
+    "t": "フレームデータの読み方",
+    "c": "rom",
+    "d": "各列の意味",
+    "h": [
+     [
+      "発生・有効・後隙",
+      "<p><b>発生</b>はボタンを押してからダメージが出るまでのフレーム、<b>有効</b>はダメージが出るフレーム、<b>後隙</b>は最後のダメージから次の行動まで。</p><p>発生が長くて有効が短い技は安全ですが、効果が薄い。多くのコンボは発生どうしをぶつけます。</p>"
+     ],
+     [
+      "ネットに表がない理由",
+      "<p>このゲームは1994年に日本でしか発売されず、当時はデータマイニングの文化もありませんでした。頼れるのはROMだけで、このサイトの数字もそこから来ています。</p>"
+     ]
+    ]
+   },
+   {
+    "t": "更强的打ち方",
+    "c": "web",
+    "d": "レイヤーと間合い",
+    "h": [
+     [
+      "壁際",
+      "<p>キャラはステージの外に出られません。相手を壁に追いつめると、逃げ方の方向が一つ減ります。</p>"
+     ],
+     [
+      "空中",
+      "<p>空中攻撃はダメージもスタンも地上よりかなり低くなりますが、必殺技の多くは空中専用です。</p>"
+     ]
+    ]
+   }
+  ],
+  "circuito": {
+   "titulo": "大会",
+   "podio": "金星",
+   "podio2": "銀星",
+   "podio3": "リーグ",
+   "p1d": "トーナメント優勝",
+   "p2d": "2対2優勝",
+   "p3d": "最も重い称号",
+   "peso": "重み",
+   "calculo": "ランキングの計算",
+   "calculo_txt": "<b>金星を1</b>とします。すると：",
+   "explica": "つまりリーグ1勝はトーナメント<b>3</b>回、2対2は半分の値です。サークルを支配するのはトーナメントの勝数が一番多い人ではなく、全部を足した人です。",
+   "ranking": "ランキング",
+   "pos": "#",
+   "jugador": "プレイヤー",
+   "torneo": "トーナメント",
+   "v2v2": "2対2",
+   "liga": "リーグ",
+   "puntos": "ポイント",
+   "progreso": "進捗",
+   "vacio": "ランキングが空です。下のフォームから読み込んでください（このブラウザーに保存されます）、または<code>data/circuito.json</code>に書いてください。",
+   "cargar": "プレイヤーを読み込む",
+   "cargar_sub": "1行に1人：<code>名前, トーナメント, 2対2, リーグ</code>。書き出しボタンでそのままアップロードできる<code>circuito.json</code>をダウンロードします。",
+   "cargar_btn": "読み込み",
+   "exportar": "circuito.jsonを書き出す",
+   "borrar": "消去",
+   "premiacion": "賞",
+   "que_es": "何か",
+   "falta_premios": "具体的な賞・日程・参加条件がまだありません。ここに書けば、順位ごとの配分率テーブルにします。",
+   "historia": "大会の歴史",
+   "historia_sub": "過去のシーズン：誰が勝ったか、どのキャラで。<code>data/circuito.json</code>の<code>history</code>から読み込みます。",
+   "sin_historia": "まだシーズンがありません。",
+   "temporada": "シーズン",
+   "ganador": "優勝",
+   "personajes": "使用キャラ",
+   "notas": "メモ",
+   "intro": "コミュニティの大会。3つのトロフィーは同じ価値ではありません。金星はトーナメントのチャンピオン、銀星は2対2のチャンピオン、リーグは最も高い表彰です。順位はこの配点で集計し、金星を基準にします。",
+   "premio": "賞品",
+   "insignias": "タイトル",
+   "sin_titulos": "—",
+   "med_oro": "金メダル",
+   "med_plata": "銀メダル",
+   "med_bronce": "銅メダル"
+  },
+  "matchup": {
+   "titulo": "相性",
+   "sub": "誰が誰に勝つか。各マスは <b>1 から 10</b>：5 は互角、10 は圧倒的。行が列に勝つ。",
+   "leyenda": "凡例",
+   "gana": "勝ち",
+   "pierde": "負け",
+   "empate": "引き分け",
+   "sin_dato": "データなし",
+   "como": "読み方",
+   "como_txt": "各マスは 1 から 10 の評価で、行が列にどれだけ有利かを示します。プロフィールと ROM の数値から計算したもので、実測の対戦ではありません。1 から 10 の数字を入れると手編集で固定されます。5 は互角、10 は圧倒的。",
+   "exportar": "matchup.jsonを書き出す",
+   "borrar_todo": "すべて消す",
+   "diag": "診断",
+   "diag_txt": "各キャラ 10 個の評価の平均。自動計算による強さの順位で、実測の対戦ではありません。",
+   "sets": "勝利数",
+   "perdidos": "敗北数",
+   "mfuerte": "非常に強い",
+   "fuerte": "強い",
+   "afavor": "有利",
+   "parejo": "互角",
+   "encontra": "不利",
+   "debil": "弱い",
+   "mdebil": "非常に弱い",
+   "bucket": {
+    "mfuerte": "非常に強い",
+    "fuerte": "強い",
+    "afavor": "有利",
+    "parejo": "互角",
+    "encontra": "不利",
+    "debil": "弱い",
+    "mdebil": "非常に弱い"
+   },
+   "recalcular": "自動に戻す",
+   "editados": "手動で編集",
+   "auto_nota": "編集しない格はプロフィールと ROM の数値から計算されます",
+   "diag_media": "平均",
+   "diag_edit": "編集済",
+   "diag_fortaleza": "強さ",
+   "jugador": "ファイター"
+  },
+  "descargas": {
+   "titulo": "ダウンロード",
+   "sin_archivo": "ファイルなし",
+   "descargar": "ダウンロード",
+   "nota_rom": "ROMについて：このゲームは著作物です。ここではダウンロードできません。遊ぶには正規品か自分の合法的なコピーを用意してください。公開しているのはツールだけです。",
+   "intro": "遊ぶためと研究するための自作ツール。すべてプロジェクトのリポジトリにあり、Fightcade + FBNeoで動作します。"
+  },
+  "datos": {
+   "titulo": "データの出どころ",
+   "sub": "このサイトはひとつだけから成り立っています：ゲームの68000を逆アセンブルして表を読むこと。このゲームにはネット上のフレームデータが一切ないため、ここで出すものは自前のものです。",
+   "movimientos": "技",
+   "con_dano": "ダメージあり",
+   "contextos": "コンテキスト",
+   "vida": "体力上限",
+   "d1": "各コンテキストのアニメーションテーブルから",
+   "d2": "サイトに掲載しているもの",
+   "d3": "1キャラ1つ、初期化ルーチンから",
+   "d4": "そして霊力223。古典的な間違いの元",
+   "etiquetas": "3つのラベル",
+   "e1": "カートリッジのコードから読んだもの。唯一の基準。",
+   "e2": "エミュレータで動かして見たもの。",
+   "e3": "外部のガイド由来。ヒントに留め、事実には使わない。",
+   "errores": "すでに犯し、二度と犯さない失敗",
+   "x1": "<b>体力上限は223ではない。</b>255。223は霊力の上限で、フィールドを間違えていた。ほぼすべての攻略に書いてあった。",
+   "x2": "<b>一部の必殺技の「ダメージ」は霊力だった。</b>与えるダメージではなく消費する資源を測っていた。",
+   "x3": "<b>公開のフレーム表は存在しない。</b>このゲームについて「発生7フレーム」と書くのはすべて捏造。",
+   "x4": "<b>蔵馬は一几率、chuiは幽助。</b>ROM上では技表を共有。画面上は4枠、実体は2人。",
+   "falta": "まだ，查明していないこと",
+   "f1": "ガードスタンの値（32）は分かっているが、メモリ上のアドレスがまだ不明。",
+   "f2": "投げ可否を決めるフィールドの意味。",
+   "f3": "実コンボ。現在のものは候補で、実測が必要。",
+   "f4": "正しいパレット。まだ取得できていない。",
+   "fuente_es": "出典：スペイン語"
+  },
+  "chip": {
+   "rom": "ROM",
+   "med": "実測",
+   "web": "ウェブ"
+  },
+  "no_encontrado": "見つかりません",
+  "pie": {
+   "linea": "ROMとエミュレータから手で書いたガイド。",
+   "origenes": "すべてのデータに由来を明記：コードで検証済み、未検証、または"
+  }
+ }
+}

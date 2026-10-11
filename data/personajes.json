@@ -1,0 +1,1895 @@
+[
+ {
+  "id": "sensui",
+  "pos": 1,
+  "nombre": "Sensui",
+  "nombre_ficha": "SENSUI",
+  "nombre_kana": "仙水忍",
+  "lema": "El Ninja Demoníaco",
+  "perfil": {
+   "Ataque": "A",
+   "Defensa": "B",
+   "Velocidad": "C",
+   "Salto": "A",
+   "Global": "B"
+  },
+  "stats": {
+   "stun": 54.0,
+   "dash": 83.0,
+   "backdash": 70.0,
+   "walk": "D"
+  },
+  "rol": "Sequences y provocación",
+  "super": "↓↓ + A/B/C",
+  "normales": [
+   {
+    "golpe": "Jump A",
+    "altura": "medio",
+    "efecto": "—",
+    "dmg": "12",
+    "stun": "10",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Jump B",
+    "altura": "medio",
+    "efecto": "—",
+    "dmg": "5",
+    "stun": "3",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Parado A",
+    "altura": "alto",
+    "efecto": "2 hits (medio/medio)",
+    "dmg": "8+8+8",
+    "stun": "8+8+8",
+    "cancel": "2.º y 3.º **no**"
+   },
+   {
+    "golpe": "Parado B",
+    "altura": "alto",
+    "efecto": "—",
+    "dmg": "5",
+    "stun": "3",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Agachado A",
+    "altura": "bajo",
+    "efecto": "derribo",
+    "dmg": "15",
+    "stun": "14",
+    "cancel": "**No**"
+   },
+   {
+    "golpe": "Agachado B",
+    "altura": "bajo",
+    "efecto": "—",
+    "dmg": "5",
+    "stun": "3",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "→+A",
+    "altura": "alto",
+    "efecto": "—",
+    "dmg": "16",
+    "stun": "12",
+    "cancel": "**No**"
+   },
+   {
+    "golpe": "→+B",
+    "altura": "alto",
+    "efecto": "—",
+    "dmg": "4+4",
+    "stun": "3+3",
+    "cancel": "ambos sí"
+   },
+   {
+    "golpe": "Aire ↑+A",
+    "altura": "medio",
+    "efecto": "—",
+    "dmg": "12",
+    "stun": "10",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Agarre",
+    "altura": "—",
+    "efecto": "flotar",
+    "dmg": "16",
+    "stun": "12",
+    "cancel": "No"
+   }
+  ],
+  "especiales": [
+   {
+    "nombre": "Puño de patada (alto)",
+    "cmd": "`A+B`",
+    "dmg": "14",
+    "mana": "16",
+    "stun": "12",
+    "super": false
+   },
+   {
+    "nombre": "Puño de patada (bajo)",
+    "cmd": "`↓+A+B`",
+    "dmg": "14",
+    "mana": "16",
+    "stun": "12",
+    "super": false
+   },
+   {
+    "nombre": "Bola roja (alta)",
+    "cmd": "`↓↘+C`",
+    "dmg": "12",
+    "mana": "4",
+    "stun": "(8+)6",
+    "super": false
+   },
+   {
+    "nombre": "Bola roja (media)",
+    "cmd": "`↓↘+B`",
+    "dmg": "12",
+    "mana": "4",
+    "stun": "(8+)6",
+    "super": false
+   },
+   {
+    "nombre": "Bola roja (baja)",
+    "cmd": "`↓↘+A`",
+    "dmg": "12",
+    "mana": "4",
+    "stun": "(8+)6",
+    "super": false
+   },
+   {
+    "nombre": "Rifle de aire",
+    "cmd": "`↓↓+A/B` + A/B encadenados",
+    "dmg": "3×N",
+    "mana": "8",
+    "stun": "3×N",
+    "super": false
+   },
+   {
+    "nombre": "**SUPER: Bola roja gigante**",
+    "cmd": "`↓↓+A/B/C`",
+    "dmg": "**64**",
+    "mana": "**50**",
+    "stun": "(8+)32",
+    "super": false
+   }
+  ],
+  "nota": "La Bola Roja gigante tiene 3 alturas (A=baja, B=media, C=alta) y se puede",
+  "frases": [
+   "Puedes descansar.",
+   "Odio a los humanos.",
+   "Ay, mi ropa se ensució.",
+   "En calidad y cantidad, no hay quien me supere..."
+  ],
+  "retrato": "img/retrato_pos01_sensui.png",
+  "ctx": [
+   5
+  ],
+  "video": "",
+  "lore": ""
+ },
+ {
+  "id": "jin",
+  "pos": 2,
+  "nombre": "Jin",
+  "nombre_ficha": "JIN",
+  "nombre_kana": "陣",
+  "lema": "El Ninja del Viento",
+  "perfil": {
+   "Ataque": "A",
+   "Defensa": "B",
+   "Velocidad": "S",
+   "Salto": "S",
+   "Global": "A"
+  },
+  "stats": {
+   "stun": 46.0,
+   "dash": 128.0,
+   "backdash": 80.0,
+   "walk": "A"
+  },
+  "rol": "Movilidad y control de espacio",
+  "super": "↓↓+A+B",
+  "normales": [
+   {
+    "golpe": "Jump A",
+    "altura": "medio",
+    "efecto": "—",
+    "dmg": "15",
+    "stun": "14",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Jump B",
+    "altura": "medio",
+    "efecto": "—",
+    "dmg": "6",
+    "stun": "3",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Parado A",
+    "altura": "alto",
+    "efecto": "—",
+    "dmg": "16",
+    "stun": "12",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Parado B",
+    "altura": "alto",
+    "efecto": "—",
+    "dmg": "5",
+    "stun": "3",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Agachado A",
+    "altura": "bajo",
+    "efecto": "derribo",
+    "dmg": "16",
+    "stun": "12",
+    "cancel": "**No**"
+   },
+   {
+    "golpe": "Agachado B",
+    "altura": "bajo",
+    "efecto": "—",
+    "dmg": "5",
+    "stun": "3",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "→+A",
+    "altura": "alto",
+    "efecto": "—",
+    "dmg": "16",
+    "stun": "12",
+    "cancel": "**No**"
+   },
+   {
+    "golpe": "→+B",
+    "altura": "alto",
+    "efecto": "—",
+    "dmg": "8",
+    "stun": "5",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Aire ↑+A",
+    "altura": "medio",
+    "efecto": "—",
+    "dmg": "16",
+    "stun": "15",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Agarre",
+    "altura": "—",
+    "efecto": "flotar",
+    "dmg": "17",
+    "stun": "14",
+    "cancel": "No"
+   },
+   {
+    "golpe": "Agarre aéreo",
+    "altura": "—",
+    "efecto": "flotar",
+    "dmg": "17",
+    "stun": "14",
+    "cancel": "No"
+   }
+  ],
+  "especiales": [
+   {
+    "nombre": "Flotar arriba",
+    "cmd": "`↑↑` aéreo",
+    "dmg": "—",
+    "mana": "8",
+    "stun": "—",
+    "super": false
+   },
+   {
+    "nombre": "Flotar adelante",
+    "cmd": "`` o Z aéreo",
+    "dmg": "—",
+    "mana": "8",
+    "stun": "—",
+    "super": false
+   },
+   {
+    "nombre": "Flotar atrás",
+    "cmd": "`` aéreo",
+    "dmg": "—",
+    "mana": "8",
+    "stun": "—",
+    "super": false
+   },
+   {
+    "nombre": "Puño del torbellino",
+    "cmd": "`↓↘+B`",
+    "dmg": "22",
+    "mana": "16",
+    "stun": "16",
+    "super": false
+   },
+   {
+    "nombre": "**Doble** torbellino",
+    "cmd": "`↓↘+A`",
+    "dmg": "12+20",
+    "mana": "24",
+    "stun": "12+16",
+    "super": false
+   },
+   {
+    "nombre": "Barrera del vendaval",
+    "cmd": "`↓↑+A/B`",
+    "dmg": "10×N (fuerte 32 / débil 24)",
+    "mana": "6×N",
+    "stun": "6×N",
+    "super": false
+   },
+   {
+    "nombre": "**SUPER: Súper barrera**",
+    "cmd": "`↓↓+A+B`",
+    "dmg": "10×N",
+    "mana": "**200**",
+    "stun": "6×N",
+    "super": false
+   }
+  ],
+  "nota": "La Barrera del Vendaval da invencibilidad temporal y atraviesa al rival.",
+  "frases": [
+   "Jeje, ¿qué haces?",
+   "Eres un tipo astuto.",
+   "¡Peligro, peligro!",
+   "¿Hubo resultado?"
+  ],
+  "retrato": "img/retrato_pos02_jin.png",
+  "ctx": [
+   6
+  ],
+  "video": "",
+  "lore": ""
+ },
+ {
+  "id": "itsuki",
+  "pos": 3,
+  "nombre": "Itsuki",
+  "nombre_ficha": "ITSUKI",
+  "nombre_kana": "樹",
+  "lema": "El Maestro del Subespacio",
+  "perfil": {
+   "Ataque": "C",
+   "Defensa": "C",
+   "Velocidad": "B",
+   "Salto": "A",
+   "Global": "C"
+  },
+  "stats": {
+   "stun": 40.0,
+   "dash": 51.0,
+   "backdash": 70.0,
+   "walk": "C"
+  },
+  "rol": "Apoyo: curación + control temporal",
+  "super": "↓+A+B",
+  "normales": [
+   {
+    "golpe": "Jump A",
+    "altura": "medio",
+    "efecto": "—",
+    "dmg": "11",
+    "stun": "8",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Jump B",
+    "altura": "medio",
+    "efecto": "—",
+    "dmg": "3",
+    "stun": "2",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Parado A",
+    "altura": "alto",
+    "efecto": "—",
+    "dmg": "12",
+    "stun": "10",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Parado B",
+    "altura": "alto",
+    "efecto": "—",
+    "dmg": "3",
+    "stun": "2",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Agachado A",
+    "altura": "bajo",
+    "efecto": "—",
+    "dmg": "8",
+    "stun": "6",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Agachado B",
+    "altura": "bajo",
+    "efecto": "—",
+    "dmg": "3",
+    "stun": "2",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "→+A",
+    "altura": "alto",
+    "efecto": "derribo",
+    "dmg": "12",
+    "stun": "8",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "→+B",
+    "altura": "alto",
+    "efecto": "—",
+    "dmg": "5",
+    "stun": "3",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "↘+A",
+    "altura": "bajo",
+    "efecto": "derribo",
+    "dmg": "12",
+    "stun": "10",
+    "cancel": "**No**"
+   },
+   {
+    "golpe": "Aire ↑+A",
+    "altura": "medio",
+    "efecto": "—",
+    "dmg": "12",
+    "stun": "10",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Agarre",
+    "altura": "—",
+    "efecto": "flotar",
+    "dmg": "15",
+    "stun": "12",
+    "cancel": "No"
+   }
+  ],
+  "especiales": [
+   {
+    "nombre": "Patada oscura",
+    "cmd": "`↓↘+A/B`",
+    "dmg": "10+10",
+    "mana": "16",
+    "stun": "8+10",
+    "super": false
+   },
+   {
+    "nombre": "Mano oscura (ataque)",
+    "cmd": "`↓↓+B` + A",
+    "dmg": "8",
+    "mana": "16",
+    "stun": "6",
+    "super": false
+   },
+   {
+    "nombre": "**Mano oscura (curación)**",
+    "cmd": "`↓↓+B` + B",
+    "dmg": "**−16 (cura)**",
+    "mana": "16",
+    "stun": "—",
+    "super": false
+   },
+   {
+    "nombre": "Patada oscura aérea",
+    "cmd": "`空中↓↓+A/B`",
+    "dmg": "12 (fuerte 20 / débil 16)",
+    "mana": "10",
+    "stun": "—",
+    "super": false
+   },
+   {
+    "nombre": "Viaje subespacial",
+    "cmd": "`↓↑+A/B/C`",
+    "dmg": "—",
+    "mana": "16",
+    "stun": "—",
+    "super": false
+   },
+   {
+    "nombre": "**SUPER: Distorsión del subespacio**",
+    "cmd": "`↓+A+B`",
+    "dmg": "— (congela 3 s)",
+    "mana": "**200**",
+    "stun": "—",
+    "super": false
+   }
+  ],
+  "nota": "**Mano oscura** es la única curación del juego: +16 HP, twice por segundo,",
+  "frases": [
+   "Ya no puedo más...",
+   "Me cansé de ti.",
+   "Se acabó el juego.",
+   "Aunque me arrepienta, es mi camino."
+  ],
+  "retrato": "img/retrato_pos03_itsuki.png",
+  "ctx": [
+   1,
+   7
+  ],
+  "video": "",
+  "lore": ""
+ },
+ {
+  "id": "genkai",
+  "pos": 4,
+  "nombre": "Genkai",
+  "nombre_ficha": "GENKAI",
+  "nombre_kana": "幻海",
+  "lema": "El Maestro de los Espíritus",
+  "perfil": {
+   "Ataque": "A",
+   "Defensa": "C",
+   "Velocidad": "A",
+   "Salto": "A",
+   "Global": "B+"
+  },
+  "stats": {
+   "stun": 34.0,
+   "dash": 78.0,
+   "backdash": 58.0,
+   "walk": "A"
+  },
+  "rol": "Reimu flexible (8 niveles)",
+  "super": "↓+A",
+  "normales": [
+   {
+    "golpe": "Jump A",
+    "altura": "medio",
+    "efecto": "—",
+    "dmg": "15",
+    "stun": "14",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Jump B",
+    "altura": "medio",
+    "efecto": "—",
+    "dmg": "5",
+    "stun": "4",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Parado A",
+    "altura": "alto",
+    "efecto": "2 hits con derribo",
+    "dmg": "5+13",
+    "stun": "4+12",
+    "cancel": "2.º **no**"
+   },
+   {
+    "golpe": "Parado B",
+    "altura": "alto",
+    "efecto": "—",
+    "dmg": "5",
+    "stun": "4",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Agachado A",
+    "altura": "bajo",
+    "efecto": "derribo",
+    "dmg": "15",
+    "stun": "14",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Agachado B",
+    "altura": "bajo",
+    "efecto": "—",
+    "dmg": "5",
+    "stun": "4",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "→+A",
+    "altura": "alto",
+    "efecto": "derribo",
+    "dmg": "12",
+    "stun": "12",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "→+B",
+    "altura": "medio",
+    "efecto": "—",
+    "dmg": "6",
+    "stun": "6",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Aire ↑+A",
+    "altura": "medio",
+    "efecto": "—",
+    "dmg": "15",
+    "stun": "14",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Agarre",
+    "altura": "—",
+    "efecto": "flotar",
+    "dmg": "16",
+    "stun": "8",
+    "cancel": "No"
+   },
+   {
+    "golpe": "Agarre aéreo",
+    "altura": "—",
+    "efecto": "derribo",
+    "dmg": "16",
+    "stun": "8",
+    "cancel": "No"
+   }
+  ],
+  "especiales": [
+   {
+    "nombre": "**Reimu**",
+    "cmd": "`↓↘+A/B` (mantener = cargar)",
+    "dmg": "**6 → 64**",
+    "mana": "**5 → 136**",
+    "stun": "**3 → 32**",
+    "super": false
+   },
+   {
+    "nombre": "Disparo de luz",
+    "cmd": "`↓↓+A/B`",
+    "dmg": "6×N",
+    "mana": "fuerte 32 / débil 16",
+    "stun": "6×N",
+    "super": false
+   },
+   {
+    "nombre": "Puño ascendente",
+    "cmd": "`↓↑+A/B`",
+    "dmg": "fuerte 16+15 / débil 16+5",
+    "mana": "fuerte 16 / débil 12",
+    "stun": "16+12",
+    "super": false
+   },
+   {
+    "nombre": "Puño ascendente aéreo",
+    "cmd": "`空中↓↑+A/B`",
+    "dmg": "fuerte 16+15 / débil 16+5",
+    "mana": "16",
+    "stun": "16+12",
+    "super": false
+   },
+   {
+    "nombre": "Cadena (×N)",
+    "cmd": "`A/B` encadenados",
+    "dmg": "5×N",
+    "mana": "fuerte 12 / débil 8",
+    "stun": "4×N (+8)",
+    "super": false
+   },
+   {
+    "nombre": "**SUPER: Golpe de luz**",
+    "cmd": "`↓+A`",
+    "dmg": "**81+15**",
+    "mana": "**200** (recupera 16)",
+    "stun": "20+12",
+    "super": false
+   }
+  ],
+  "nota": "",
+  "frases": [
+   "No perdono a los que no se toman en serio.",
+   "¡Muy ingenuo! Ve a practicarlo.",
+   "No necesitas maná contra ti."
+  ],
+  "retrato": "img/retrato_pos04_genkai.png",
+  "ctx": [
+   11
+  ],
+  "video": "",
+  "lore": ""
+ },
+ {
+  "id": "kuwabara",
+  "pos": 5,
+  "nombre": "Kuwabara",
+  "nombre_ficha": "KUWABARA",
+  "nombre_kana": "桑原一雄",
+  "lema": "El Malote del Instituto",
+  "perfil": {
+   "Ataque": "A",
+   "Defensa": "A",
+   "Velocidad": "C",
+   "Salto": "B",
+   "Global": "B+"
+  },
+  "stats": {
+   "dash": 55.0,
+   "backdash": 70.0,
+   "walk": "C"
+  },
+  "rol": "Aguanta, pero no entra",
+  "super": "↓↓+A",
+  "normales": [
+   {
+    "golpe": "Jump A",
+    "altura": "medio ×2",
+    "efecto": "—",
+    "dmg": "10+12",
+    "stun": "8+10",
+    "cancel": "ambos sí"
+   },
+   {
+    "golpe": "Jump B",
+    "altura": "medio",
+    "efecto": "—",
+    "dmg": "7",
+    "stun": "4",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Parado A",
+    "altura": "alto",
+    "efecto": "derribo",
+    "dmg": "20",
+    "stun": "10",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Parado B",
+    "altura": "alto",
+    "efecto": "—",
+    "dmg": "7",
+    "stun": "4",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Agachado A",
+    "altura": "bajo",
+    "efecto": "derribo",
+    "dmg": "18",
+    "stun": "10",
+    "cancel": "**No**"
+   },
+   {
+    "golpe": "Agachado B",
+    "altura": "bajo",
+    "efecto": "—",
+    "dmg": "7",
+    "stun": "4",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "→+A",
+    "altura": "alto ×2",
+    "efecto": "—",
+    "dmg": "18+14",
+    "stun": "8+8",
+    "cancel": "2.º **no**"
+   },
+   {
+    "golpe": "→+B",
+    "altura": "alto",
+    "efecto": "—",
+    "dmg": "10",
+    "stun": "6",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Aire ↑+A",
+    "altura": "medio",
+    "efecto": "—",
+    "dmg": "18",
+    "stun": "12",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Agarre",
+    "altura": "—",
+    "efecto": "derribo",
+    "dmg": "20",
+    "stun": "14",
+    "cancel": "No"
+   },
+   {
+    "golpe": "**Provocación**",
+    "altura": "alto",
+    "efecto": "derribo",
+    "dmg": "5",
+    "stun": "**64**",
+    "cancel": "No"
+   }
+  ],
+  "especiales": [
+   {
+    "nombre": "Espada espiritual (vertical)",
+    "cmd": "`A+B`",
+    "dmg": "18×2",
+    "mana": "12",
+    "stun": "10×2",
+    "super": false
+   },
+   {
+    "nombre": "Espada espiritual (horizontal)",
+    "cmd": "`+A+B`",
+    "dmg": "15×2",
+    "mana": "12",
+    "stun": "10+8",
+    "super": false
+   },
+   {
+    "nombre": "Espada espiritual aérea",
+    "cmd": "`空中A+B`",
+    "dmg": "20+10",
+    "mana": "12",
+    "stun": "10×2",
+    "super": false
+   },
+   {
+    "nombre": "Espada espiritual (agachado)",
+    "cmd": "`↓+A+B`",
+    "dmg": "15×2",
+    "mana": "12",
+    "stun": "8+6",
+    "super": false
+   },
+   {
+    "nombre": "Estocada espiritual",
+    "cmd": "`↓↘+A/B`",
+    "dmg": "fuerte 20 / débil 15",
+    "mana": "16",
+    "stun": "12",
+    "super": false
+   },
+   {
+    "nombre": "Shuriken espiritual",
+    "cmd": "`↓↓+A/B`",
+    "dmg": "8×3",
+    "mana": "18",
+    "stun": "6×3",
+    "super": false
+   },
+   {
+    "nombre": "Hoja dimensional",
+    "cmd": "`↓↑+A/B/C`",
+    "dmg": "8×3",
+    "mana": "20",
+    "stun": "6×3",
+    "super": false
+   },
+   {
+    "nombre": "**SUPER: Tormenta de espadas**",
+    "cmd": "`↓↓+A`",
+    "dmg": "**(20+)×11**",
+    "mana": "**200**",
+    "stun": "(8+)2×11",
+    "super": false
+   }
+  ],
+  "nota": "La Tormenta de Espadas hace **11 hits** contra la mayoría, **12** contra",
+  "frases": [
+   "¡Con mi poder, esto no es nada!",
+   "¡JA! ¿Te rindes?",
+   "¡Contrata un seguro, idiota!",
+   "¡Jajaja, te lo tenías merecido,Pkg!"
+  ],
+  "retrato": "img/retrato_pos05_kuwabara.png",
+  "ctx": [
+   2
+  ],
+  "video": "",
+  "lore": ""
+ },
+ {
+  "id": "yusuke",
+  "pos": 6,
+  "nombre": "Yusuke",
+  "nombre_ficha": "YUSUKE",
+  "nombre_kana": "浦飯幽助",
+  "lema": "El Protagonista",
+  "perfil": {
+   "Ataque": "A",
+   "Defensa": "A",
+   "Velocidad": "A",
+   "Salto": "A",
+   "Global": "A+"
+  },
+  "stats": {
+   "stun": 48.0,
+   "dash": 79.0,
+   "backdash": 65.0,
+   "walk": "B"
+  },
+  "rol": "El más balanced del juego",
+  "super": "↓+A",
+  "normales": [
+   {
+    "golpe": "Jump A",
+    "altura": "medio+alto",
+    "efecto": "—",
+    "dmg": "17+9",
+    "stun": "10+4",
+    "cancel": "2.º **no**"
+   },
+   {
+    "golpe": "Jump B",
+    "altura": "medio",
+    "efecto": "—",
+    "dmg": "6",
+    "stun": "3",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Parado A",
+    "altura": "alto",
+    "efecto": "derribo",
+    "dmg": "18",
+    "stun": "12",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Parado B",
+    "altura": "alto",
+    "efecto": "—",
+    "dmg": "6",
+    "stun": "3",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Agachado A",
+    "altura": "bajo",
+    "efecto": "derribo",
+    "dmg": "19",
+    "stun": "14",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Agachado B",
+    "altura": "bajo",
+    "efecto": "—",
+    "dmg": "6",
+    "stun": "3",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "→+A",
+    "altura": "alto ×2",
+    "efecto": "—",
+    "dmg": "15+10",
+    "stun": "8+6",
+    "cancel": "2.º **no**"
+   },
+   {
+    "golpe": "→+B",
+    "altura": "alto ×2",
+    "efecto": "—",
+    "dmg": "7+6",
+    "stun": "2+2",
+    "cancel": "ambos sí"
+   },
+   {
+    "golpe": "Aire ↑+A",
+    "altura": "medio",
+    "efecto": "—",
+    "dmg": "16",
+    "stun": "10",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Agarre",
+    "altura": "—",
+    "efecto": "flotar",
+    "dmg": "19",
+    "stun": "10",
+    "cancel": "No"
+   }
+  ],
+  "especiales": [
+   {
+    "nombre": "**Reimu**",
+    "cmd": "`↓↘+A/B` (mantener = cargar)",
+    "dmg": "**6 → 64**",
+    "mana": "**5 → 136**",
+    "stun": "**3 → 32**",
+    "super": false
+   },
+   {
+    "nombre": "Reimu aéreo",
+    "cmd": "`空中↓↘+A/B`",
+    "dmg": "24",
+    "mana": "—",
+    "stun": "—",
+    "super": false
+   },
+   {
+    "nombre": "Escopetazo",
+    "cmd": "`↓↓+A/B/C` encadenados",
+    "dmg": "6×3 (+4×N)",
+    "mana": "32",
+    "stun": "2×N",
+    "super": false
+   },
+   {
+    "nombre": "Cadena (×N)",
+    "cmd": "`A/B` encadenados",
+    "dmg": "6×N (fuerte 16 / débil 12)",
+    "mana": "3+2×N",
+    "stun": "2×N",
+    "super": false
+   },
+   {
+    "nombre": "**SUPER: Estallido de luz**",
+    "cmd": "`↓+A`",
+    "dmg": "**56+64**",
+    "mana": "**200**",
+    "stun": "22+32",
+    "super": false
+   }
+  ],
+  "nota": "En el 7.º hit del super podés **añadir otra Reimu** con A o B.",
+  "frases": [
+   "¡No tienes ganas de pelear, eh?",
+   "Eres insuficiente, métete en casa.",
+   "¡Soy el protagonista, ganar es mi derecho!",
+   "¡Ve a mirar el más allá!"
+  ],
+  "retrato": "img/retrato_pos06_yusuke.png",
+  "ctx": [
+   3,
+   9
+  ],
+  "video": "",
+  "lore": ""
+ },
+ {
+  "id": "kurama",
+  "pos": 7,
+  "nombre": "Kurama",
+  "nombre_ficha": "KURAMA",
+  "nombre_kana": "蔵馬",
+  "lema": "El Zorro Demoníaco",
+  "perfil": {
+   "Ataque": "B",
+   "Defensa": "C",
+   "Velocidad": "B",
+   "Salto": "B",
+   "Global": "B"
+  },
+  "stats": {
+   "stun": 40.0,
+   "dash": 59.0,
+   "backdash": 70.0,
+   "walk": "C"
+  },
+  "rol": "Control a distancia",
+  "super": "↓↓+A",
+  "normales": [
+   {
+    "golpe": "Jump A",
+    "altura": "medio",
+    "efecto": "—",
+    "dmg": "16",
+    "stun": "14",
+    "cancel": "**No**"
+   },
+   {
+    "golpe": "Jump B",
+    "altura": "medio",
+    "efecto": "—",
+    "dmg": "6",
+    "stun": "3",
+    "cancel": "**No**"
+   },
+   {
+    "golpe": "Parado A",
+    "altura": "alto ×2",
+    "efecto": "—",
+    "dmg": "15+18",
+    "stun": "8+8",
+    "cancel": "2.º **no**"
+   },
+   {
+    "golpe": "Parado B",
+    "altura": "bajo",
+    "efecto": "—",
+    "dmg": "5",
+    "stun": "2",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Agachado A",
+    "altura": "bajo",
+    "efecto": "derribo",
+    "dmg": "16",
+    "stun": "12",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Agachado B",
+    "altura": "bajo",
+    "efecto": "—",
+    "dmg": "6",
+    "stun": "3",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "→+A",
+    "altura": "alto",
+    "efecto": "derribo",
+    "dmg": "17",
+    "stun": "12",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "→+B",
+    "altura": "alto",
+    "efecto": "—",
+    "dmg": "9",
+    "stun": "6",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Aire ↑+A",
+    "altura": "medio",
+    "efecto": "—",
+    "dmg": "18",
+    "stun": "14",
+    "cancel": "**No**"
+   },
+   {
+    "golpe": "Agarre",
+    "altura": "—",
+    "efecto": "flotar",
+    "dmg": "17",
+    "stun": "8",
+    "cancel": "No"
+   }
+  ],
+  "especiales": [
+   {
+    "nombre": "Látigo de rosas",
+    "cmd": "`A+B`",
+    "dmg": "11+14",
+    "mana": "16",
+    "stun": "6+8",
+    "super": false
+   },
+   {
+    "nombre": "Flor de rosas",
+    "cmd": "`↓↘+A/B`",
+    "dmg": "4",
+    "mana": "16",
+    "stun": "4",
+    "super": false
+   },
+   {
+    "nombre": "Planta del demonio",
+    "cmd": "`↓↓+A/B/C`",
+    "dmg": "8+16",
+    "mana": "24",
+    "stun": "4+10",
+    "super": false
+   },
+   {
+    "nombre": "Ronda de flores",
+    "cmd": "`↓↑+A/B`",
+    "dmg": "8×N (fuerte 24 / débil 16)",
+    "mana": "6×N",
+    "stun": "6×N",
+    "super": false
+   },
+   {
+    "nombre": "**SUPER: Puño de zarza**",
+    "cmd": "`↓↓+A`",
+    "dmg": "**16×8**",
+    "mana": "**200**",
+    "stun": "4×3+8+4×3+8",
+    "super": false
+   }
+  ],
+  "nota": "**Látigo de rosas** tiene el **stun más alto de los normales** entre los golpes",
+  "frases": [
+   "Podría haber jugado 2 o 3 minutos más..."
+  ],
+  "retrato": "img/retrato_pos07_kurama.png",
+  "ctx": [
+   1,
+   7
+  ],
+  "video": "",
+  "lore": ""
+ },
+ {
+  "id": "hiei",
+  "pos": 8,
+  "nombre": "Hiei",
+  "nombre_ficha": "HIEI",
+  "nombre_kana": "飛影",
+  "lema": "El Ninja de Fuego",
+  "perfil": {
+   "Ataque": "B",
+   "Defensa": "B",
+   "Velocidad": "S",
+   "Salto": "B",
+   "Global": "B"
+  },
+  "stats": {
+   "stun": 44.0,
+   "dash": 120.0,
+   "backdash": 70.0
+  },
+  "rol": "Modo dragón (daño ×2)",
+  "super": "↓↓+A/B",
+  "normales": [
+   {
+    "golpe": "Jump A",
+    "altura": "medio+alto",
+    "efecto": "—",
+    "dmg": "8+5",
+    "stun": "**16+10**",
+    "cancel": "8+4"
+   },
+   {
+    "golpe": "Jump B",
+    "altura": "medio",
+    "efecto": "—",
+    "dmg": "3",
+    "stun": "6",
+    "cancel": "2"
+   },
+   {
+    "golpe": "Parado A",
+    "altura": "alto",
+    "efecto": "—",
+    "dmg": "12",
+    "stun": "**24**",
+    "cancel": "10"
+   },
+   {
+    "golpe": "Parado B",
+    "altura": "alto",
+    "efecto": "—",
+    "dmg": "3",
+    "stun": "6",
+    "cancel": "2"
+   },
+   {
+    "golpe": "Agachado A",
+    "altura": "bajo",
+    "efecto": "derribo",
+    "dmg": "12 (11 si golpea de espaldas)",
+    "stun": "**24** (22)",
+    "cancel": "10 (8)"
+   },
+   {
+    "golpe": "Agachado B",
+    "altura": "bajo",
+    "efecto": "—",
+    "dmg": "3",
+    "stun": "6",
+    "cancel": "2"
+   },
+   {
+    "golpe": "→+A",
+    "altura": "alto ×2",
+    "efecto": "2.º derribo",
+    "dmg": "8+8",
+    "stun": "**16+16**",
+    "cancel": "8+8"
+   },
+   {
+    "golpe": "→+B",
+    "altura": "alto",
+    "efecto": "—",
+    "dmg": "6",
+    "stun": "12",
+    "cancel": "5"
+   },
+   {
+    "golpe": "Aire ↑+A",
+    "altura": "medio",
+    "efecto": "—",
+    "dmg": "12 (9 espaldas)",
+    "stun": "**24** (18)",
+    "cancel": "10 (6)"
+   },
+   {
+    "golpe": "Agarre",
+    "altura": "—",
+    "efecto": "flotar",
+    "dmg": "15",
+    "stun": "**30**",
+    "cancel": "12"
+   }
+  ],
+  "especiales": [
+   {
+    "nombre": "Afterimage",
+    "cmd": "``",
+    "dmg": "—",
+    "mana": "—",
+    "stun": "8",
+    "super": false
+   },
+   {
+    "nombre": "Espada de fuego",
+    "cmd": "`A+B`",
+    "dmg": "9+11",
+    "mana": "**18+22**",
+    "stun": "32",
+    "super": false
+   },
+   {
+    "nombre": "Quemazón (×N)",
+    "cmd": "`↓↘+A/B`",
+    "dmg": "6×N",
+    "mana": "**12×N**",
+    "stun": "6×N",
+    "super": false
+   },
+   {
+    "nombre": "Corte del ave",
+    "cmd": "`↓↓+A/B` + dirección",
+    "dmg": "2+16",
+    "mana": "**2+34**",
+    "stun": "24",
+    "super": false
+   },
+   {
+    "nombre": "**SUPER: Dragón negro**",
+    "cmd": "`↓↓+A/B`",
+    "dmg": "**88**",
+    "mana": "—",
+    "stun": "**200**",
+    "super": false
+   }
+  ],
+  "nota": "",
+  "frases": [
+   "¡QuéDios tan ingenuo!",
+   "¿Creías que con esa fuerza podías vencerme?",
+   "No subestimes el poder de mi ojo demoníaco.",
+   "¡Demuestra tu verdadera fuerza!"
+  ],
+  "retrato": "img/retrato_pos08_hiei.png",
+  "ctx": [
+   4
+  ],
+  "video": "",
+  "lore": ""
+ },
+ {
+  "id": "chui",
+  "pos": 9,
+  "nombre": "Chui",
+  "nombre_ficha": "CHUI",
+  "nombre_kana": "酎",
+  "lema": "El Alquimista Borracho",
+  "perfil": {
+   "Ataque": "A",
+   "Defensa": "A",
+   "Velocidad": "B",
+   "Salto": "A",
+   "Global": "A−"
+  },
+  "stats": {
+   "stun": 48.0,
+   "dash": 81.0,
+   "backdash": 79.0,
+   "walk": "B"
+  },
+  "rol": "Todo A, carga de 7 niveles",
+  "super": "↓↗+A",
+  "normales": [
+   {
+    "golpe": "Jump A",
+    "altura": "medio",
+    "efecto": "—",
+    "dmg": "17",
+    "stun": "12",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Jump B",
+    "altura": "medio",
+    "efecto": "—",
+    "dmg": "7",
+    "stun": "4",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Parado A",
+    "altura": "alto",
+    "efecto": "derribo",
+    "dmg": "18",
+    "stun": "14",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Parado B",
+    "altura": "alto",
+    "efecto": "—",
+    "dmg": "7",
+    "stun": "4",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Agachado A",
+    "altura": "bajo",
+    "efecto": "derribo",
+    "dmg": "19",
+    "stun": "14",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Agachado B",
+    "altura": "bajo",
+    "efecto": "—",
+    "dmg": "7",
+    "stun": "4",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "→+A",
+    "altura": "alto",
+    "efecto": "—",
+    "dmg": "16",
+    "stun": "14",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "→+B",
+    "altura": "alto",
+    "efecto": "—",
+    "dmg": "12",
+    "stun": "8",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Aire ↑+A",
+    "altura": "medio",
+    "efecto": "—",
+    "dmg": "16",
+    "stun": "12",
+    "cancel": "**No**"
+   },
+   {
+    "golpe": "Agarre",
+    "altura": "—",
+    "efecto": "flotar",
+    "dmg": "**22 (el más alto)**",
+    "stun": "16",
+    "cancel": "No"
+   }
+  ],
+  "especiales": [
+   {
+    "nombre": "Paso borracho",
+    "cmd": "`A+B`",
+    "dmg": "—",
+    "mana": "16",
+    "stun": "—",
+    "super": false
+   },
+   {
+    "nombre": "**Bola de licor**",
+    "cmd": "`↓↘+A/B` (mantener = cargar)",
+    "dmg": "**8 → 64**",
+    "mana": "**6 → 136**",
+    "stun": "**4 → 32**",
+    "super": false
+   },
+   {
+    "nombre": "Bola de licor (guardada)",
+    "cmd": "`↓↘+C`",
+    "dmg": "—",
+    "mana": "6",
+    "stun": "—",
+    "super": false
+   },
+   {
+    "nombre": "Embestida de licor",
+    "cmd": "`↓↓+A/B`",
+    "dmg": "22 (fuerte 20 / débil 16)",
+    "mana": "14",
+    "stun": "—",
+    "super": false
+   },
+   {
+    "nombre": "Patada aérea de licor",
+    "cmd": "`空中↓↓+A/B`",
+    "dmg": "20 (fuerte 20 / débil 16)",
+    "mana": "16",
+    "stun": "—",
+    "super": false
+   },
+   {
+    "nombre": "Cadena (×N)",
+    "cmd": "`A/B` encadenados",
+    "dmg": "6×N (fuerte 16 / débil 12)",
+    "mana": "fuerte 2×N+4 / débil 2×N",
+    "stun": "2×N",
+    "super": false
+   },
+   {
+    "nombre": "**SUPER: Patada del ventisquero**",
+    "cmd": "`↓↗+A`",
+    "dmg": "**8×4+24+28**",
+    "mana": "**200**",
+    "stun": "2×4+8+10",
+    "super": false
+   }
+  ],
+  "nota": "",
+  "frases": [
+   "¡Qué divertimiento, aunque sea por el sake!"
+  ],
+  "retrato": "img/retrato_pos09_chui.png",
+  "ctx": [
+   3,
+   9
+  ],
+  "video": "",
+  "lore": ""
+ },
+ {
+  "id": "toguro_mayor",
+  "pos": 10,
+  "nombre": "Toguro Mayor",
+  "nombre_ficha": "TOGURO",
+  "nombre_kana": "hermano mayor) (戶愚呂兄",
+  "lema": "El Regenerador Infernal",
+  "perfil": {
+   "Ataque": "A",
+   "Defensa": "C",
+   "Velocidad": "B",
+   "Salto": "B",
+   "Global": "B"
+  },
+  "stats": {
+   "stun": 38.0,
+   "dash": 51.0,
+   "backdash": 65.0
+  },
+  "rol": "Técnica anti-cancel",
+  "super": "↓↓+A",
+  "normales": [
+   {
+    "golpe": "Jump A",
+    "altura": "medio",
+    "efecto": "—",
+    "dmg": "12",
+    "stun": "10",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Jump B",
+    "altura": "medio",
+    "efecto": "—",
+    "dmg": "4",
+    "stun": "2",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Parado A",
+    "altura": "alto",
+    "efecto": "—",
+    "dmg": "16",
+    "stun": "12",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Parado B",
+    "altura": "alto",
+    "efecto": "—",
+    "dmg": "4",
+    "stun": "2",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Agachado A",
+    "altura": "bajo",
+    "efecto": "derribo",
+    "dmg": "16",
+    "stun": "14",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Agachado B",
+    "altura": "bajo",
+    "efecto": "—",
+    "dmg": "4",
+    "stun": "2",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "→+A",
+    "altura": "alto",
+    "efecto": "—",
+    "dmg": "16",
+    "stun": "12",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "→+B",
+    "altura": "alto",
+    "efecto": "—",
+    "dmg": "8",
+    "stun": "8",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Aire ↑+A",
+    "altura": "medio",
+    "efecto": "—",
+    "dmg": "16",
+    "stun": "12",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Agarre",
+    "altura": "—",
+    "efecto": "flotar",
+    "dmg": "11+13",
+    "stun": "6+8",
+    "cancel": "No"
+   }
+  ],
+  "especiales": [
+   {
+    "nombre": "Aguja de todo el cuerpo",
+    "cmd": "`A+B`",
+    "dmg": "15",
+    "mana": "24",
+    "stun": "12",
+    "super": false
+   },
+   {
+    "nombre": "Estocada marcial",
+    "cmd": "`↓↘+A/B`",
+    "dmg": "20",
+    "mana": "16",
+    "stun": "12",
+    "super": false
+   },
+   {
+    "nombre": "Aguja subterránea",
+    "cmd": "`↓↓+A/B`",
+    "dmg": "18 (fuerte 24 / débil 16)",
+    "mana": "14",
+    "stun": "—",
+    "super": false
+   },
+   {
+    "nombre": "**Aguja especial (Dedal)**",
+    "cmd": "`↓↓+C`",
+    "dmg": "6",
+    "mana": "8",
+    "stun": "**64**",
+    "super": false
+   },
+   {
+    "nombre": "Doble (impostor)",
+    "cmd": "`↓↑+A/B/C`",
+    "dmg": "—",
+    "mana": "8",
+    "stun": "—",
+    "super": false
+   },
+   {
+    "nombre": "**SUPER: Espada del caos**",
+    "cmd": "`↓↓+A`",
+    "dmg": "10×N",
+    "mana": "**200**",
+    "stun": "4×N",
+    "super": false
+   }
+  ],
+  "nota": "**Aguja especial (指刺) — la mecánica más rota del juego:**",
+  "frases": [
+   "¡Ja! Grita en el más allá!"
+  ],
+  "retrato": "img/retrato_pos10_toguromayor.png",
+  "ctx": [
+   8
+  ],
+  "video": "",
+  "lore": ""
+ },
+ {
+  "id": "toguro_menor",
+  "pos": 11,
+  "nombre": "Toguro Menor",
+  "nombre_ficha": "TOGURO",
+  "nombre_kana": "hermano menor) (戶愚呂弟",
+  "lema": "El Más Fuerte",
+  "perfil": {
+   "Ataque": "S",
+   "Defensa": "S",
+   "Velocidad": "C",
+   "Salto": "B",
+   "Global": "A"
+  },
+  "stats": {
+   "dash": 72.0,
+   "backdash": 80.0
+  },
+  "rol": "Rey del golpe",
+  "super": "↓↓+A",
+  "normales": [
+   {
+    "golpe": "Jump A",
+    "altura": "medio",
+    "efecto": "—",
+    "dmg": "**22 (el más alto)**",
+    "stun": "16",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Jump B",
+    "altura": "medio",
+    "efecto": "—",
+    "dmg": "8",
+    "stun": "4",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Parado A",
+    "altura": "alto",
+    "efecto": "derribo",
+    "dmg": "**24** (18 si levanta el puño)",
+    "stun": "16 (12)",
+    "cancel": "sí (no mientras levanta)"
+   },
+   {
+    "golpe": "Parado B",
+    "altura": "alto",
+    "efecto": "—",
+    "dmg": "11",
+    "stun": "4",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Agachado A",
+    "altura": "bajo",
+    "efecto": "derribo",
+    "dmg": "**24** (20)",
+    "stun": "18 (14)",
+    "cancel": "**No**"
+   },
+   {
+    "golpe": "Agachado B",
+    "altura": "bajo",
+    "efecto": "—",
+    "dmg": "8",
+    "stun": "4",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "→+A",
+    "altura": "alto",
+    "efecto": "derribo",
+    "dmg": "**24**",
+    "stun": "16",
+    "cancel": "**No**"
+   },
+   {
+    "golpe": "→+B",
+    "altura": "alto",
+    "efecto": "—",
+    "dmg": "15",
+    "stun": "8",
+    "cancel": "Sí"
+   },
+   {
+    "golpe": "Aire ↑+A",
+    "altura": "medio",
+    "efecto": "derribo",
+    "dmg": "**20** (18)",
+    "stun": "16 (14)",
+    "cancel": "sí (no mientras levanta)"
+   },
+   {
+    "golpe": "Agarre",
+    "altura": "—",
+    "efecto": "flotar",
+    "dmg": "20",
+    "stun": "12",
+    "cancel": "No"
+   },
+   {
+    "golpe": "Agarre aéreo",
+    "altura": "—",
+    "efecto": "derribo",
+    "dmg": "20",
+    "stun": "12",
+    "cancel": "No"
+   }
+  ],
+  "especiales": [
+   {
+    "nombre": "Armadura de músculo",
+    "cmd": "`A+B`",
+    "dmg": "8",
+    "mana": "24",
+    "stun": "4",
+    "super": false
+   },
+   {
+    "nombre": "**Gancho superior**",
+    "cmd": "`↓↘+B`",
+    "dmg": "**30+30** (2.º: 30+22)",
+    "mana": "20+20",
+    "stun": "—",
+    "super": false
+   },
+   {
+    "nombre": "**Gancho inferior**",
+    "cmd": "`↓↘+A`",
+    "dmg": "**30+30**",
+    "mana": "16",
+    "stun": "20+20",
+    "super": false
+   },
+   {
+    "nombre": "Ráfaga de dardos",
+    "cmd": "`↓↓+A/B/C` encadenados",
+    "dmg": "6×N",
+    "mana": "16",
+    "stun": "2×N",
+    "super": false
+   },
+   {
+    "nombre": "Caída aérea",
+    "cmd": "`空中↓↓+A/B`",
+    "dmg": "fuerte 24 / débil 20",
+    "mana": "fuerte 20 / débil 16",
+    "stun": "16",
+    "super": false
+   },
+   {
+    "nombre": "**SUPER: 100% dentro del 100%**",
+    "cmd": "`↓↓+A`",
+    "dmg": "**20×N**",
+    "mana": "**200**",
+    "stun": "8×5",
+    "super": false
+   }
+  ],
+  "nota": "**Gancho superior e inferior = 30+30 = 60 de daño**, el golpe normal más",
+  "frases": [
+   "No mereces pelear al 100%...",
+   "Qué débil, esto es todo tu poder?",
+   "¿Así es tu 100%? Qué pena.",
+   "Con eso no me puedes derrotar."
+  ],
+  "retrato": "img/retrato_pos11_toguromenor.png",
+  "ctx": [
+   10
+  ],
+  "video": "",
+  "lore": ""
+ }
+]

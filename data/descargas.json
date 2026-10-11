@@ -1,0 +1,88 @@
+{
+ "intro": "Herramientas propias para jugar y para estudiar el juego. Todas están en el repositorio del proyecto y se pueden usar con Fightcade + FBNeo.",
+ "categorias": [
+  {
+   "titulo": "Emulador y mambo",
+   "descripcion": "Lo mínimo para jugar en condiciones derivadas del original.",
+   "items": [
+    {
+     "icono": "🎮",
+     "nombre": "Fightcade + FBNeo",
+     "desc": "El emulador que se usa para todo: scripting en Lua, guardado de estados y hotkeys, grab de partidas.",
+     "nota": "El motor del juego es el core de Genesis que trae FBNeo. Se instala aparte: no va incluido aquí.",
+     "href": ""
+    },
+    {
+     "icono": "🕹️",
+     "nombre": "Hackroom propio",
+     "desc": "Mando/teclado adaptador para jugar en la tele o de a dos. Falta subir los archivos.",
+     "nota": "Pendiente: subir los archivos del hardware y el firmware.",
+     "href": ""
+    }
+   ]
+  },
+  {
+   "titulo": "Herramientas de pelea (scripts de Lua para Fightcade)",
+   "descripcion": "Se cargan desde Game > Lua Scripting > New Lua Script Window > Browse.",
+   "items": [
+    {
+     "icono": "📦",
+     "nombre": "yuyu_hitbox_hud.lua",
+     "desc": "Muestra las cinco listas de cajas (hit, clash, hurt, push, agarre) con los colores de cada rival, más barras de vida, maná y stun.",
+     "href": "descargas/yuyu_hitbox_hud.lua"
+    },
+    {
+     "icono": "🗺",
+     "nombre": "yuyu_movemap.lua",
+     "desc": "Mapea botón → movimiento. Grabá una entrada y te dice qué golpe es.",
+     "href": "descargas/yuyu_movemap.lua"
+    },
+    {
+     "icono": "🔍",
+     "nombre": "yuyu_probe.lua",
+     "desc": "Sonda: vuelca el estado interno de los dos luchadores y las cajas por pantalla.",
+     "href": "descargas/yuyu_probe.lua"
+    },
+    {
+     "icono": "🎥",
+     "nombre": "yuyu_camara.lua",
+     "desc": "Cámara libre: mueve la vista fuera de los límites del juego y se ven escenarios que nunca aparecen jugando normal.",
+     "href": "descargas/yuyu_camara.lua"
+    },
+    {
+     "icono": "🔎",
+     "nombre": "yuyu_zoom.lua",
+     "desc": "Zoom usando la escala que tiene el propio juego en memoria ($3E).",
+     "href": "descargas/yuyu_zoom.lua"
+    },
+    {
+     "icono": "🏐",
+     "nombre": "yuyu_voley.lua",
+     "desc": "Minijuego de voley: la pelota la pegan las hitboxes reales de los ataques.",
+     "nota": "Para Diversión, no para entrenar. Escribe en la memoria del juego, así que no lo uses en partida ranked.",
+     "href": "descargas/yuyu_voley.lua"
+    }
+   ]
+  },
+  {
+   "titulo": "Análisis del ROM",
+   "descripcion": "Lo que se usó para sacar los datos de esta web.",
+   "items": [
+    {
+     "icono": "🧪",
+     "nombre": "rom_gui.py + rom_streams.py",
+     "desc": "Abre los streams gráficos del ROM, decodifica los dos códecs y renderiza VRAM, tiles y nametables.",
+     "nota": "Necesita Python con Pillow. Va con su lanzador: abrir_inspector.bat",
+     "href": "descargas/rom_streams.py"
+    },
+    {
+     "icono": "📚",
+     "nombre": "Guías completas en Markdown",
+     "desc": "La documentación técnica del proyecto: direcciones, tablas y trampas del motor.",
+     "nota": "Está en el repositorio. Se puede copiar al hosting cuando quieras.",
+     "href": ""
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,17 @@
+{
+  "intro": "El circuito de la comunidad. Hay tres trofeos y no valen lo mismo: la estrella dorada se lleva el campeón del torneo, la plateada el del 2 contra 2, y la liga es el reconocimiento más alto que hay. El ranking se arma con esos pesos, tomando la estrella dorada como referencia.",
+  "pesos": {
+    "estrella_dorada": 1,
+    "estrella_plateada": 0.5,
+    "liga": 3
+  },
+  "jugadores": [],
+  "_notas": {
+    "estrella_dorada": "campeón del torneo argentino, peso 1 (la referencia)",
+    "estrella_plateada": "campeón del 2 contra 2, peso 0.5",
+    "liga": "campeón de la liga, peso 3",
+    "formato": "nombre, torneo, 2v2, liga — se puede cargar desde la web o editar este fichero"
+  },
+  "historia": [],
+  "_notas_historia": "Temporadas ya jugadas. Cada entrada: temporada (texto), ganador (texto), personajes (lista de ids de personajes.json), notas (texto). Ejemplo: {\"temporada\": \"2026-T1\", \"ganador\": \"Nico\", \"personajes\": [\"sensui\", \"jin\"], \"notas\": \"final 3-1\"}"
+}
