@@ -12,4 +12,7 @@ node_modules/
 # lo que se genera al construir
 dist/
 .vercel/
-.vercel
+
+# ficheros temporales de prueba
+*_demo_*
+seed.html
